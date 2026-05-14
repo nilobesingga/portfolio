@@ -4,29 +4,90 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Nilo Besingga | App Developer · Flutter · Vibe Coder</title>
+	<title>Nilo Besingga — Application Developer &amp; Vibe Coder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Full-Stack App Developer specializing in Laravel, Vue.js, Flutter, and AI-assisted vibe coding. 8+ years building scalable web and mobile solutions." />
+	<meta name="description" content="Application Developer with 8+ years building production web and mobile applications. Specializes in Laravel, Vue.js, Flutter, and AI-assisted delivery with Claude. Based in the Philippines — open to remote, hybrid, or onsite roles." />
+	<meta name="author" content="Nilo Besingga" />
+	<meta name="robots" content="index, follow" />
+	<meta name="keywords" content="Nilo Besingga, Application Developer, Full-Stack Developer, Mobile App Developer, Flutter, Vue.js, Laravel, Claude AI, Philippines Developer, Remote Developer, Web Developer" />
+	<meta name="theme-color" content="#050814" />
 
-	<meta property="og:title" content="Nilo Besingga | Application Developer" />
+	<!-- Theme bootstrap: applies stored/preferred theme before paint to prevent FOUC -->
+	<script>
+		(function () {
+			try {
+				var stored = localStorage.getItem('portfolio.theme');
+				var theme;
+				if (stored === 'light' || stored === 'dark') {
+					theme = stored;
+				} else {
+					theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+				}
+				document.documentElement.setAttribute('data-theme', theme);
+			} catch (e) {
+				document.documentElement.setAttribute('data-theme', 'dark');
+			}
+		})();
+	</script>
+
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Nilo Besingga — Application Developer &amp; Vibe Coder" />
 	<meta property="og:image" content="images/1615352107595.jpg" />
+	<meta property="og:image:alt" content="Nilo Besingga — Application Developer" />
 	<meta property="og:site_name" content="Nilo Besingga Portfolio" />
-	<meta property="og:description" content="Application Developer specializing in Laravel, Vue.js, and API Integration." />
-	<meta name="twitter:title" content="Nilo Besingga | Application Developer" />
+	<meta property="og:description" content="Application Developer · Laravel · Vue.js · Flutter · AI-assisted delivery with Claude. Available for hire." />
+	<meta name="twitter:title" content="Nilo Besingga — Application Developer" />
+	<meta name="twitter:description" content="Application Developer · Laravel · Vue.js · Flutter · AI-assisted delivery with Claude." />
 	<meta name="twitter:image" content="images/1615352107595.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
 
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono|Kaushan+Script" rel="stylesheet">
+	<!-- JSON-LD: Person schema -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Nilo Besingga",
+		"jobTitle": "Application Developer",
+		"description": "Application Developer with 8+ years building production web and mobile applications. Specializes in Laravel, Vue.js, Flutter, and AI-assisted delivery with Claude.",
+		"image": "images/1615352107595.jpg",
+		"email": "mailto:nbesingga@gmail.com",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Dolho Bato",
+			"addressRegion": "Leyte",
+			"addressCountry": "PH"
+		},
+		"sameAs": [
+			"https://www.linkedin.com/in/nilo-besingga-b7346b196"
+		],
+		"knowsAbout": ["Vue.js", "Laravel", "Flutter", "Dart", "PHP", "MySQL", "REST APIs", "Claude AI", "JavaScript", "Node.js", "Docker"],
+		"alumniOf": {
+			"@type": "CollegeOrUniversity",
+			"name": "Southern Leyte State University"
+		},
+		"worksFor": {
+			"@type": "Organization",
+			"name": "AAI Worldwide Logistics"
+		}
+	}
+	</script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono|Kaushan+Script|Orbitron:400,500,700,900|JetBrains+Mono:400,500,700&display=swap" rel="stylesheet">
 	<link rel="icon" href="images/logo.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="images/logo.png">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css?v=20260514b">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Tech FX layer  -->
+	<link rel="stylesheet" href="css/tech-fx.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -39,7 +100,9 @@
 
 <body>
 
-	<nav id="fh5co-nav">
+	<a class="skip-link" href="#fh5co-about">Skip to content</a>
+
+	<nav id="fh5co-nav" aria-label="primary">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -51,6 +114,12 @@
 						<li><a href="#fh5co-skills">Skills</a></li>
 						<li><a href="#fh5co-work">Work</a></li>
 						<li><a href="#fh5co-started" class="hire-btn">Hire Me</a></li>
+						<li class="fh5co-nav-extra">
+							<button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle light/dark theme" title="Toggle light/dark theme">
+								<span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">◐</span>
+								<span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+							</button>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -63,23 +132,36 @@
 		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
 			style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
+			<div class="tech-grid"></div>
+			<div class="scanline"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t js-fullheight">
 							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-								<div class="hero-console"><span class="console-text">// system.online &nbsp;|&nbsp; stack: AI-first &nbsp;|&nbsp; v2026</span></div>
 								<div class="profile-thumb" style="background: url(images/1615352107595.jpg);"></div>
+								<div class="terminal-tag">&gt; ./init_developer.sh<span class="cursor-blink">_</span></div>
 								<h1><span>Nilo Besingga</span></h1>
-								<h3><span>Application Developer</span></h3>
+								<h3><span class="role-tag">&lt;Application Developer /&gt;</span></h3>
 								<div class="hero-status">
-									<span class="status-badge"><span class="status-dot"></span> Available for hire &middot; Laravel &nbsp;·&nbsp; Flutter &nbsp;·&nbsp; Vibe Coder</span>
+									<span class="status-badge"><span class="status-dot"></span> Available for hire &middot; Shipping production software with AI-assisted workflows</span>
+								</div>
+								<div class="tech-stack-strip">
+									<span class="tech-chip">Vue.js</span>
+									<span class="tech-chip">Laravel</span>
+									<span class="tech-chip">Flutter</span>
+									<span class="tech-chip">Claude AI</span>
+									<span class="tech-chip">Vibe Coding</span>
+								</div>
+								<div class="hero-stats">
+									<div class="stat"><strong data-count="8" data-suffix="+">0</strong>Years Shipping</div>
+									<div class="stat"><strong data-count="50" data-suffix="+">0</strong>Projects</div>
+									<div class="stat"><strong data-count="6">0</strong>Companies</div>
+									<div class="stat"><strong data-count="3">0</strong>Countries</div>
 								</div>
 								<ul class="fh5co-social-icons">
-									<li><a href="#" target="_blank" rel="noopener noreferrer"><i
-												class="icon-github2"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer"><i
-												class="icon-linkedin2"></i></a></li>
+									<li><a href="#" target="_blank" rel="noopener noreferrer"><i class="icon-github2"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer"><i class="icon-linkedin2"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -95,44 +177,223 @@
 						<h2>About Me</h2>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-5">
-						<ul class="info">
-							<li><span class="first-block">Full Name:</span><span class="second-block">Nilo Besingga</span></li>
-							<li><span class="first-block">Phone:</span><span class="second-block">+63 935 333 0652</span></li>
-							<li><span class="first-block">Email:</span><span class="second-block">nbesingga@gmail.com</span></li>
-							<li><span class="first-block">LinkedIn:</span>
-								<a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer">
-									<span class="second-block">nilo-besingga</span>
-								</a>
-							</li>
-							<li><span class="first-block">Address:</span><span class="second-block">Dolho Bato, Leyte, Philippines</span></li>
-						</ul>
-					</div>
+
+				<div class="row about-intro reveal">
 					<div class="col-md-7">
-						<h2>👨‍💻 Hi there!</h2>
-						<p>I’m a passionate application developer with 8+ years of experience building robust, scalable
-							web applications. I specialize in <strong>Laravel</strong>, <strong>Vue.js</strong>, and
-							<strong>API Integration</strong> — turning complex business requirements into clean,
-							efficient software that actually works in production.</p>
-						<p>From logistics systems at AAI Worldwide Logistics, enterprise software at CRESCO in Dubai,
-							to freelance full-stack development at TersusNet — I’ve shipped real solutions across
-							multiple industries and time zones. Now building <strong>Flutter mobile apps</strong> and
-							fully embracing <strong>vibe coding</strong> — AI-assisted development that ships ideas
-							at the speed of thought.
-						</p>
-						<p>
-							Let’s build something awesome together. 🚀
-						</p>
-						<p>
-							<a href="resume.pdf" class="btn btn-primary btn-sm" download><i class="icon-download"></i> Download Resume</a>
-						</p>
-						<ul class="fh5co-social-icons">
-							<li><a href="#" target="_blank" rel="noopener noreferrer"><i
-										class="icon-github2"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer"><i
-										class="icon-linkedin2"></i></a></li>
-						</ul>
+						<div class="code-card" aria-label="Developer profile object">
+							<div class="code-card__chrome">
+								<span class="code-card__dot code-card__dot--r"></span>
+								<span class="code-card__dot code-card__dot--y"></span>
+								<span class="code-card__dot code-card__dot--g"></span>
+								<span class="code-card__title">~/portfolio/<span class="tab-active">developer.js</span></span>
+							</div>
+							<div class="code-card__body">
+								<div class="code-card__gutter">
+1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14
+								</div>
+								<div class="code-card__code"><pre><span class="tk-cmt">// developer profile · 2026</span>
+<span class="tk-key">const</span> <span class="tk-fn">developer</span> <span class="tk-punct">=</span> <span class="tk-punct">{</span>
+  <span class="tk-key">name</span><span class="tk-punct">:</span> <span class="tk-str">'Nilo Besingga'</span><span class="tk-punct">,</span>
+  <span class="tk-key">role</span><span class="tk-punct">:</span> <span class="tk-str">'Application Developer'</span><span class="tk-punct">,</span>
+  <span class="tk-key">stack</span><span class="tk-punct">:</span> <span class="tk-punct">[</span><span class="tk-str">'vue'</span><span class="tk-punct">,</span> <span class="tk-str">'laravel'</span><span class="tk-punct">,</span> <span class="tk-str">'flutter'</span><span class="tk-punct">,</span> <span class="tk-str">'mysql'</span><span class="tk-punct">,</span> <span class="tk-str">'claude-ai'</span><span class="tk-punct">],</span>
+  <span class="tk-key">yearsOfExperience</span><span class="tk-punct">:</span> <span class="tk-num">8</span><span class="tk-punct">,</span>
+  <span class="tk-key">focus</span><span class="tk-punct">:</span> <span class="tk-punct">[</span><span class="tk-str">'logistics systems'</span><span class="tk-punct">,</span> <span class="tk-str">'API design'</span><span class="tk-punct">,</span> <span class="tk-str">'AI automation'</span><span class="tk-punct">,</span> <span class="tk-str">'mobile apps'</span><span class="tk-punct">],</span>
+  <span class="tk-key">location</span><span class="tk-punct">:</span> <span class="tk-str">'Dolho Bato, Leyte · PH'</span><span class="tk-punct">,</span>
+  <span class="tk-key">remoteFriendly</span><span class="tk-punct">:</span> <span class="tk-bool">true</span><span class="tk-punct">,</span>
+  <span class="tk-key">availableForHire</span><span class="tk-punct">:</span> <span class="tk-bool">true</span><span class="tk-punct">,</span>
+  <span class="tk-fn">ship</span><span class="tk-punct">(</span>idea<span class="tk-punct">)</span> <span class="tk-punct">{</span>
+    <span class="tk-key">return</span> idea<span class="tk-punct">.</span><span class="tk-fn">refine</span><span class="tk-punct">().</span><span class="tk-fn">build</span><span class="tk-punct">().</span><span class="tk-fn">test</span><span class="tk-punct">().</span><span class="tk-fn">deploy</span><span class="tk-punct">();</span>
+  <span class="tk-punct">}</span>
+<span class="tk-punct">};</span>
+<span class="tk-cmt">// → ready to contribute to your next product<span class="code-caret"></span></span></pre></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-5">
+						<div class="about-panel">
+							<div class="about-panel__label">// profile</div>
+							<h3 class="about-panel__title">Engineer · Builder · Problem-solver</h3>
+							<p class="about-panel__lead">
+								Application Developer with <strong>8+ years</strong> shipping production web and
+								mobile applications across logistics, enterprise, and freelance projects.
+								I specialize in <strong>Vue.js</strong> and <strong>Laravel</strong> on the web,
+								<strong>Flutter</strong> on mobile, and clean REST API design to connect systems.
+							</p>
+							<p>
+								I work end-to-end — from requirements and architecture through implementation,
+								testing, and deployment — and pair daily with <strong>Claude AI</strong> to
+								accelerate delivery without sacrificing code quality.
+							</p>
+
+							<ul class="about-pillars">
+								<li><span class="about-pillars__k">✓</span> Owns features end-to-end, web and mobile</li>
+								<li><span class="about-pillars__k">✓</span> Bias for shipping with engineering discipline</li>
+								<li><span class="about-pillars__k">✓</span> Strong UX and API design instincts</li>
+								<li><span class="about-pillars__k">✓</span> Leaves the codebase healthier than found</li>
+							</ul>
+
+							<div class="about-panel__cta">
+								<a href="resume.pdf" class="btn btn-primary btn-sm" download><i class="icon-download"></i> Download Resume</a>
+								<a href="#fh5co-started" class="btn btn-ghost btn-sm">Get in touch &rarr;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="profile-config">
+							<header class="profile-config__chrome">
+								<span class="profile-config__dots"><i></i><i></i><i></i></span>
+								<span class="profile-config__path">~/profile.<span class="tab-active">config</span></span>
+								<span class="profile-config__status"><span class="profile-config__pulse"></span> available</span>
+							</header>
+							<div class="profile-config__body">
+								<div class="cfg-col">
+									<div class="cfg-row">
+										<span class="cfg-key">name</span>
+										<span class="cfg-op">=</span>
+										<span class="cfg-val cfg-val--str">"Nilo Besingga"</span>
+									</div>
+									<div class="cfg-row">
+										<span class="cfg-key">role</span>
+										<span class="cfg-op">=</span>
+										<span class="cfg-val cfg-val--str">"Application Developer"</span>
+									</div>
+									<div class="cfg-row">
+										<span class="cfg-key">email</span>
+										<span class="cfg-op">=</span>
+										<a class="cfg-val cfg-val--str cfg-link" href="mailto:nbesingga@gmail.com">"nbesingga@gmail.com"</a>
+										<button class="cfg-copy" type="button" data-copy="nbesingga@gmail.com" aria-label="copy email">copy</button>
+									</div>
+									<div class="cfg-row">
+										<span class="cfg-key">phone</span>
+										<span class="cfg-op">=</span>
+										<a class="cfg-val cfg-val--str cfg-link" href="tel:+639353330652">"+63 935 333 0652"</a>
+									</div>
+								</div>
+								<div class="cfg-col">
+									<div class="cfg-row">
+										<span class="cfg-key">location</span>
+										<span class="cfg-op">=</span>
+										<span class="cfg-val cfg-val--str">"Dolho Bato, Leyte · Philippines"</span>
+									</div>
+									<div class="cfg-row">
+										<span class="cfg-key">timezone</span>
+										<span class="cfg-op">=</span>
+										<span class="cfg-val cfg-val--str">"GMT+8 · PHT"</span>
+									</div>
+									<div class="cfg-row">
+										<span class="cfg-key">availability</span>
+										<span class="cfg-op">=</span>
+										<span class="cfg-val cfg-val--str">"remote · hybrid · onsite"</span>
+									</div>
+									<div class="cfg-row">
+										<span class="cfg-key">languages</span>
+										<span class="cfg-op">=</span>
+										<span class="cfg-val cfg-val--arr">[<span class="cfg-val--str">"English"</span>, <span class="cfg-val--str">"Filipino"</span>]</span>
+									</div>
+									<div class="cfg-row">
+										<span class="cfg-key">socials</span>
+										<span class="cfg-op">=</span>
+										<span class="cfg-socials">
+											<a href="#" target="_blank" rel="noopener noreferrer" data-tip="GitHub" aria-label="GitHub"><i class="icon-github2"></i></a>
+											<a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer" data-tip="LinkedIn" aria-label="LinkedIn"><i class="icon-linkedin2"></i></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row about-extras">
+					<div class="col-md-6">
+						<section class="px-card">
+							<header class="px-card__chrome">
+								<span class="px-card__dots"><i></i><i></i><i></i></span>
+								<span class="px-card__path">~/.<span class="tab-active">now.json</span></span>
+								<span class="px-card__badge">LIVE</span>
+							</header>
+							<div class="px-card__body">
+								<pre class="px-code"><span class="tk-punct">{</span>
+  <span class="tk-key">"currentlyShipping"</span><span class="tk-punct">:</span>  <span class="tk-str">"Enterprise logistics platform · Laravel + Vue.js"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"currentlyReading"</span><span class="tk-punct">:</span>   <span class="tk-str">"Clean Architecture"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"currentlyLearning"</span><span class="tk-punct">:</span>  <span class="tk-str">"Flutter advanced patterns · n8n agents"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"currentSideQuest"</span><span class="tk-punct">:</span>   <span class="tk-str">"refining this portfolio"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"openTo"</span><span class="tk-punct">:</span>             <span class="tk-punct">[</span><span class="tk-str">"full-time"</span><span class="tk-punct">,</span> <span class="tk-str">"contract"</span><span class="tk-punct">,</span> <span class="tk-str">"freelance"</span><span class="tk-punct">],</span>
+  <span class="tk-key">"vibeCheck"</span><span class="tk-punct">:</span>          <span class="tk-str">"focused · building · shipping"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"lastUpdated"</span><span class="tk-punct">:</span>        <span class="tk-str">"2026-05-14"</span>
+<span class="tk-punct">}</span></pre>
+							</div>
+						</section>
+					</div>
+
+					<div class="col-md-6">
+						<section class="px-card">
+							<header class="px-card__chrome">
+								<span class="px-card__dots"><i></i><i></i><i></i></span>
+								<span class="px-card__path">~/docs/<span class="tab-active">principles.md</span></span>
+								<span class="px-card__badge px-card__badge--brand"># engineering</span>
+							</header>
+							<div class="px-card__body">
+								<ul class="px-principles">
+									<li><span class="px-principles__num">01</span><span>Ship the smallest useful version, then iterate.</span></li>
+									<li><span class="px-principles__num">02</span><span>Readable code beats clever code &mdash; future-you is grateful.</span></li>
+									<li><span class="px-principles__num">03</span><span>Test the hard parts. Mock the boundaries, not the logic.</span></li>
+									<li><span class="px-principles__num">04</span><span>Leave the codebase healthier than you found it.</span></li>
+									<li><span class="px-principles__num">05</span><span>Strong opinions, weakly held &mdash; listen, then choose.</span></li>
+									<li><span class="px-principles__num">06</span><span>Logs and types pay rent every single day.</span></li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<div class="row about-extras">
+					<div class="col-md-12">
+						<section class="px-card">
+							<header class="px-card__chrome">
+								<span class="px-card__dots"><i></i><i></i><i></i></span>
+								<span class="px-card__path">~/hire/<span class="tab-active">faq.md</span></span>
+								<span class="px-card__badge">recruiter Q&amp;A</span>
+							</header>
+							<div class="px-card__body">
+								<ul class="px-faq">
+									<li>
+										<details>
+											<summary><span class="px-faq__q">Q. Notice period &amp; earliest start?</span></summary>
+											<p class="px-faq__a">30-day notice from current role. Available for a serious offer within ~30&ndash;45 days of signing.</p>
+										</details>
+									</li>
+									<li>
+										<details>
+											<summary><span class="px-faq__q">Q. Salary range / day rate?</span></summary>
+											<p class="px-faq__a">Negotiable based on scope and engagement type. Happy to share specifics on a call once the role is clear.</p>
+										</details>
+									</li>
+									<li>
+										<details>
+											<summary><span class="px-faq__q">Q. Remote, hybrid, or onsite?</span></summary>
+											<p class="px-faq__a">All three open. Strong async-collaboration habits; based in Leyte (GMT+8) with good overlap to APAC, EU mornings, and US evenings.</p>
+										</details>
+									</li>
+									<li>
+										<details>
+											<summary><span class="px-faq__q">Q. Contract or full-time?</span></summary>
+											<p class="px-faq__a">Either &mdash; tell me what you need. Currently full-time at AAI; open to contract on the side or a full move for the right role.</p>
+										</details>
+									</li>
+									<li>
+										<details>
+											<summary><span class="px-faq__q">Q. Visa / work eligibility?</span></summary>
+											<p class="px-faq__a">Philippine citizen. Work-from-PH or contract globally without sponsorship. Sponsorship needed for onsite outside PH.</p>
+										</details>
+									</li>
+								</ul>
+							</div>
+						</section>
 					</div>
 				</div>
 			</div>
@@ -145,224 +406,270 @@
 						<h2>My Resume</h2>
 					</div>
 				</div>
-				<div class="row resume-stats-row animate-box">
-					<div class="col-xs-6 col-sm-3 text-center">
-						<div class="resume-stat-card">
-							<span class="stat-num">8+</span>
-							<span class="stat-label">Years Experience</span>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-3 text-center">
-						<div class="resume-stat-card">
-							<span class="stat-num">6</span>
-							<span class="stat-label">Companies</span>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-3 text-center">
-						<div class="resume-stat-card">
-							<span class="stat-num">50+</span>
-							<span class="stat-label">Projects Shipped</span>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-3 text-center">
-						<div class="resume-stat-card">
-							<span class="stat-num">3</span>
-							<span class="stat-label">Countries</span>
-						</div>
-					</div>
-				</div>
 				<div class="row">
-					<div class="col-md-12 col-md-offset-0">
-						<div class=”ctl”>
-
-							<!-- ── Work Experience ── -->
-							<div class=”ctl-label animate-box”>
-								<span>Work Experience</span>
-							</div>
-
-							<div class=”ctl-entry s1 animate-box”>
-								<div class=”ctl-side”>
-									<span class=”ctl-year”>2026</span>
-									<span class=”ctl-dot”><i class=”icon-code”></i></span>
-								</div>
-								<div class=”ctl-card”>
-									<div class=”ctl-top”>
-										<h3 class=”ctl-title”>Software Engineer</h3>
-										<span class=”ctl-sub”>AAI Worldwide Logistics &nbsp;·&nbsp; March 2026 – Present</span>
-									</div>
-									<div class=”ctl-body”>
-										<p>🚀 Leading software development initiatives at AAI Worldwide Logistics, building and maintaining enterprise-grade web applications that support logistics and supply chain operations.<br>
-										🔗 Collaborating across teams to design and implement robust APIs, streamline data workflows, and deliver user-friendly interfaces for complex operational systems.<br>
-										📦 Contributing to internal tooling, automation, and system integrations that improve operational efficiency across the organization.</p>
-										<div class=”ctl-tags”>
-											<span class=”t-tag t-tag-red”>Laravel</span>
-											<span class=”t-tag t-tag-green”>Vue.js</span>
-											<span class=”t-tag t-tag-flutter”>Flutter</span>
-											<span class=”t-tag t-tag-cyan”>MySQL</span>
-											<span class=”t-tag”>Docker</span>
-											<span class=”t-tag t-tag-ai”>Claude AI</span>
+					<div class="col-md-10 col-md-offset-1">
+						<div class="exp-group">
+							<div class="exp-group__label">// experience.log <span class="exp-group__count">6 entries</span></div>
+							<ol class="exp-list" role="list">
+								<li class="exp-item animate-box" data-year="Mar 2026 — Now">
+									<span class="exp-item__dot" aria-hidden="true"></span>
+									<article class="exp-card">
+										<header class="exp-card__chrome">
+											<span class="exp-card__dots"><i></i><i></i><i></i></span>
+											<span class="exp-card__path">~/career/<span class="tab-active">aai-software-engineer</span></span>
+											<span class="exp-card__period">Mar 2026 — Current</span>
+										</header>
+										<div class="exp-card__body">
+											<h3 class="exp-card__role">Software Engineer</h3>
+											<div class="exp-card__company"><span class="exp-card__co">AAI Worldwide Logistics</span> &middot; <span class="exp-card__loc">Philippines</span></div>
+											<p class="exp-card__summary">
+												Leading software development initiatives at AAI Worldwide Logistics,
+												building and maintaining enterprise-grade web applications that support
+												logistics and supply chain operations.
+											</p>
+											<ul class="exp-card__bullets">
+												<li>Designing and shipping full-stack features for the company's
+													<strong>logistics platform</strong> using Laravel, Vue.js, and Flutter
+													— from requirements through production deployment.</li>
+												<li>Adopted <strong>Vibe Coding</strong> — AI-assisted delivery with
+													<strong>Claude AI</strong> — to compress prototyping and refactoring
+													cycles while keeping code review and engineering judgment in the loop.</li>
+												<li>Collaborating across teams to design and implement robust APIs,
+													streamline data workflows, and deliver user-friendly interfaces for
+													complex operational systems.</li>
+												<li>Contributing to internal tooling, automation, and system integrations
+													that improve operational efficiency across the organization.</li>
+											</ul>
+											<div class="exp-card__stack">
+												<span class="exp-chip">Laravel</span>
+												<span class="exp-chip">Vue.js</span>
+												<span class="exp-chip">Flutter</span>
+												<span class="exp-chip">Dart</span>
+												<span class="exp-chip">MySQL</span>
+												<span class="exp-chip">Docker</span>
+												<span class="exp-chip exp-chip--ai">Claude AI</span>
+												<span class="exp-chip exp-chip--ai">Vibe Coding</span>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
+									</article>
+								</li>
 
-							<div class=”ctl-entry s2 animate-box”>
-								<div class=”ctl-side”>
-									<span class=”ctl-year”>2023</span>
-									<span class=”ctl-dot”><i class=”icon-globe”></i></span>
-								</div>
-								<div class=”ctl-card”>
-									<div class=”ctl-top”>
-										<h3 class=”ctl-title”>Freelance Web Developer</h3>
-										<span class=”ctl-sub”>TersusNet &nbsp;·&nbsp; 2023 – January 2026</span>
-									</div>
-									<div class=”ctl-body”>
-										<p>🌐 Developed, tested, and maintained responsive and user-friendly websites for clients across different industries.<br>
-										💻 Wrote clean, efficient code using HTML, CSS, JavaScript, and modern frameworks including Vue.js — and integrated APIs and databases using PHP, Laravel, and Node.js.<br>
-										🔒 Optimized web applications for speed, scalability, and security, while collaborating with designers to implement polished UI/UX improvements across all deliverables.</p>
-										<div class=”ctl-tags”>
-											<span class=”t-tag t-tag-red”>Laravel</span>
-											<span class=”t-tag t-tag-green”>Vue.js</span>
-											<span class=”t-tag”>Node.js</span>
-											<span class=”t-tag t-tag-cyan”>REST API</span>
-											<span class=”t-tag”>HTML/CSS</span>
+								<li class="exp-item animate-box" data-year="2023 — Jan 2026">
+									<span class="exp-item__dot" aria-hidden="true"></span>
+									<article class="exp-card">
+										<header class="exp-card__chrome">
+											<span class="exp-card__dots"><i></i><i></i><i></i></span>
+											<span class="exp-card__path">~/career/<span class="tab-active">tersusnet-freelance</span></span>
+											<span class="exp-card__period">2023 — Jan 2026</span>
+										</header>
+										<div class="exp-card__body">
+											<h3 class="exp-card__role">Freelance Web Developer</h3>
+											<div class="exp-card__company"><span class="exp-card__co">TersusNet</span> &middot; <span class="exp-card__loc">Remote</span></div>
+											<p class="exp-card__summary">
+												Developed, tested, and maintained responsive and user-friendly websites
+												for clients across different industries, delivering full-stack solutions
+												from design to deployment.
+											</p>
+											<ul class="exp-card__bullets">
+												<li>Built clean, efficient code using HTML, CSS, JavaScript, and modern
+													frameworks including <strong>Vue.js</strong> — and integrated APIs and
+													databases using <strong>PHP, Laravel, and Node.js</strong>.</li>
+												<li>Optimized web applications for speed, scalability, and security,
+													collaborating with designers to implement polished UI/UX improvements
+													across all deliverables.</li>
+												<li>Managed multiple concurrent client projects, ensuring consistent
+													on-time delivery and clear communication throughout the engagement.</li>
+											</ul>
+											<div class="exp-card__stack">
+												<span class="exp-chip">Laravel</span>
+												<span class="exp-chip">Vue.js</span>
+												<span class="exp-chip">Node.js</span>
+												<span class="exp-chip">REST API</span>
+												<span class="exp-chip">PHP</span>
+												<span class="exp-chip">HTML/CSS</span>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
+									</article>
+								</li>
 
-							<div class=”ctl-entry s3 animate-box”>
-								<div class=”ctl-side”>
-									<span class=”ctl-year”>2024</span>
-									<span class=”ctl-dot”><i class=”icon-briefcase”></i></span>
-								</div>
-								<div class=”ctl-card”>
-									<div class=”ctl-top”>
-										<h3 class=”ctl-title”>Software Engineer</h3>
-										<span class=”ctl-sub”>CRESCO Software Technology &nbsp;·&nbsp; Nov 2024 – Oct 2025 &nbsp;·&nbsp; Dubai, UAE</span>
-									</div>
-									<div class=”ctl-body”>
-										<p>🌍 Worked onsite in Dubai delivering enterprise software solutions for CRESCO Software Technology (Crescotec L.L.C - FZ).<br>
-										🛠️ Built and maintained scalable applications, contributing to cross-functional teams in a fast-paced international environment.<br>
-										📊 Stayed current with industry best practices and emerging technologies to deliver high-quality, maintainable software products.</p>
-										<div class=”ctl-tags”>
-											<span class=”t-tag t-tag-red”>Laravel</span>
-											<span class=”t-tag t-tag-green”>Vue.js</span>
-											<span class=”t-tag t-tag-purple”>PostgreSQL</span>
-											<span class=”t-tag t-tag-cyan”>REST API</span>
-											<span class=”t-tag”>ERP</span>
+								<li class="exp-item animate-box" data-year="Nov 2024 — Oct 2025">
+									<span class="exp-item__dot" aria-hidden="true"></span>
+									<article class="exp-card">
+										<header class="exp-card__chrome">
+											<span class="exp-card__dots"><i></i><i></i><i></i></span>
+											<span class="exp-card__path">~/career/<span class="tab-active">cresco-dubai</span></span>
+											<span class="exp-card__period">Nov 2024 — Oct 2025</span>
+										</header>
+										<div class="exp-card__body">
+											<h3 class="exp-card__role">Software Engineer</h3>
+											<div class="exp-card__company"><span class="exp-card__co">CRESCO Software Technology</span> &middot; <span class="exp-card__loc">Dubai, UAE &middot; Onsite</span></div>
+											<p class="exp-card__summary">
+												Worked onsite in Dubai delivering enterprise software solutions for
+												CRESCO Software Technology (Crescotec L.L.C - FZ) in a fast-paced
+												international environment.
+											</p>
+											<ul class="exp-card__bullets">
+												<li>Built and maintained scalable enterprise applications, contributing
+													to cross-functional teams across the full software delivery lifecycle.</li>
+												<li>Designed and implemented backend APIs and frontend interfaces for
+													<strong>ERP modules</strong> used by business-critical operations.</li>
+												<li>Stayed current with industry best practices and emerging technologies
+													to deliver high-quality, maintainable software products.</li>
+											</ul>
+											<div class="exp-card__stack">
+												<span class="exp-chip">Laravel</span>
+												<span class="exp-chip">Vue.js</span>
+												<span class="exp-chip">PostgreSQL</span>
+												<span class="exp-chip">REST API</span>
+												<span class="exp-chip">ERP</span>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
+									</article>
+								</li>
 
-							<div class=”ctl-entry s4 animate-box”>
-								<div class=”ctl-side”>
-									<span class=”ctl-year”>2021</span>
-									<span class=”ctl-dot”><i class=”icon-database”></i></span>
-								</div>
-								<div class=”ctl-card”>
-									<div class=”ctl-top”>
-										<h3 class=”ctl-title”>Application Developer</h3>
-										<span class=”ctl-sub”>AAI Worldwide Logistics &nbsp;·&nbsp; June 2021 – November 2024</span>
-									</div>
-									<div class=”ctl-body”>
-										<p>🚚 Developed and maintained web applications supporting logistics, warehousing, and supply chain operations across the organization.<br>
-										🔌 Built and integrated APIs to connect internal systems and external services, ensuring seamless data flow across platforms.<br>
-										🧩 Worked closely with operations and management teams to translate business requirements into reliable, scalable software solutions.</p>
-										<div class=”ctl-tags”>
-											<span class=”t-tag t-tag-red”>Laravel</span>
-											<span class=”t-tag t-tag-green”>Vue.js</span>
-											<span class=”t-tag t-tag-cyan”>MySQL</span>
-											<span class=”t-tag”>REST API</span>
-											<span class=”t-tag”>Linux</span>
+								<li class="exp-item animate-box" data-year="Jun 2021 — Nov 2024">
+									<span class="exp-item__dot" aria-hidden="true"></span>
+									<article class="exp-card">
+										<header class="exp-card__chrome">
+											<span class="exp-card__dots"><i></i><i></i><i></i></span>
+											<span class="exp-card__path">~/career/<span class="tab-active">aai-app-developer</span></span>
+											<span class="exp-card__period">Jun 2021 — Nov 2024</span>
+										</header>
+										<div class="exp-card__body">
+											<h3 class="exp-card__role">Application Developer</h3>
+											<div class="exp-card__company"><span class="exp-card__co">AAI Worldwide Logistics</span> &middot; <span class="exp-card__loc">Philippines</span></div>
+											<p class="exp-card__summary">
+												Developed and maintained web applications supporting logistics,
+												warehousing, and supply chain operations across the organization
+												over three years of continuous delivery.
+											</p>
+											<ul class="exp-card__bullets">
+												<li>Built and integrated APIs to connect internal systems and external
+													services, ensuring seamless data flow across platforms.</li>
+												<li>Developed key features for the <strong>FMS</strong>, <strong>CRM</strong>,
+													and <strong>TMS</strong> — from data reporting tools to operational
+													dashboards using <strong>Vue.js</strong> and <strong>Laravel</strong>.</li>
+												<li>Worked closely with operations and management teams to translate
+													business requirements into reliable, scalable software solutions.</li>
+											</ul>
+											<div class="exp-card__stack">
+												<span class="exp-chip">Laravel</span>
+												<span class="exp-chip">Vue.js</span>
+												<span class="exp-chip">MySQL</span>
+												<span class="exp-chip">REST API</span>
+												<span class="exp-chip">Linux</span>
+												<span class="exp-chip">Docker</span>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
+									</article>
+								</li>
 
-							<div class=”ctl-entry s5 animate-box”>
-								<div class=”ctl-side”>
-									<span class=”ctl-year”>2018</span>
-									<span class=”ctl-dot”><i class=”icon-truck”></i></span>
-								</div>
-								<div class=”ctl-card”>
-									<div class=”ctl-top”>
-										<h3 class=”ctl-title”>Application Developer</h3>
-										<span class=”ctl-sub”>Black Arrow Express &nbsp;·&nbsp; March 2018 – August 2020</span>
-									</div>
-									<div class=”ctl-body”>
-										<p>📦 Developed and maintained internal applications supporting the day-to-day operations of a fast-growing courier and logistics company.<br>
-										💡 Worked on both frontend interfaces and backend logic — from operational forms to data reporting tools.<br>
-										🧑‍💻 Gained solid hands-on experience delivering fast, reliable features under real business pressure.</p>
-										<div class=”ctl-tags”>
-											<span class=”t-tag t-tag-red”>PHP</span>
-											<span class=”t-tag t-tag-red”>Laravel</span>
-											<span class=”t-tag t-tag-cyan”>MySQL</span>
-											<span class=”t-tag”>jQuery</span>
-											<span class=”t-tag”>Bootstrap</span>
+								<li class="exp-item animate-box" data-year="Mar 2018 — Aug 2020">
+									<span class="exp-item__dot" aria-hidden="true"></span>
+									<article class="exp-card">
+										<header class="exp-card__chrome">
+											<span class="exp-card__dots"><i></i><i></i><i></i></span>
+											<span class="exp-card__path">~/career/<span class="tab-active">black-arrow-express</span></span>
+											<span class="exp-card__period">Mar 2018 — Aug 2020</span>
+										</header>
+										<div class="exp-card__body">
+											<h3 class="exp-card__role">Application Developer</h3>
+											<div class="exp-card__company"><span class="exp-card__co">Black Arrow Express</span> &middot; <span class="exp-card__loc">Philippines</span></div>
+											<p class="exp-card__summary">
+												Developed and maintained internal applications supporting the day-to-day
+												operations of a fast-growing courier and logistics company.
+											</p>
+											<ul class="exp-card__bullets">
+												<li>Worked on both frontend interfaces and backend logic — from operational
+													forms to <strong>data reporting tools</strong> used by operations teams.</li>
+												<li>Built features that streamlined package tracking, billing workflows,
+													and internal operational data management.</li>
+												<li>Gained solid hands-on experience delivering fast, reliable features
+													under real business pressure in a high-volume environment.</li>
+											</ul>
+											<div class="exp-card__stack">
+												<span class="exp-chip">PHP</span>
+												<span class="exp-chip">Laravel</span>
+												<span class="exp-chip">MySQL</span>
+												<span class="exp-chip">jQuery</span>
+												<span class="exp-chip">Bootstrap</span>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
+									</article>
+								</li>
 
-							<div class=”ctl-entry s6 animate-box”>
-								<div class=”ctl-side”>
-									<span class=”ctl-year”>2017</span>
-									<span class=”ctl-dot”><i class=”icon-desktop”></i></span>
-								</div>
-								<div class=”ctl-card”>
-									<div class=”ctl-top”>
-										<h3 class=”ctl-title”>IT Support Specialist</h3>
-										<span class=”ctl-sub”>KLG International, Inc. &nbsp;·&nbsp; April 2017 – March 2018 &nbsp;·&nbsp; Paranaque City</span>
-									</div>
-									<div class=”ctl-body”>
-										<p>🖥️ Provided technical support to internal teams — maintaining systems, troubleshooting hardware and software issues, and keeping operations running smoothly day to day.<br>
-										🔧 Supported network infrastructure and resolved user issues promptly to minimize downtime across the organization.<br>
-										📚 Built a strong technical foundation that set the stage for a career in full-stack application development.</p>
-										<div class=”ctl-tags”>
-											<span class=”t-tag”>Linux</span>
-											<span class=”t-tag”>Windows Server</span>
-											<span class=”t-tag”>Networking</span>
-											<span class=”t-tag”>PHP</span>
-											<span class=”t-tag t-tag-cyan”>MySQL</span>
+								<li class="exp-item animate-box" data-year="Apr 2017 — Mar 2018">
+									<span class="exp-item__dot" aria-hidden="true"></span>
+									<article class="exp-card">
+										<header class="exp-card__chrome">
+											<span class="exp-card__dots"><i></i><i></i><i></i></span>
+											<span class="exp-card__path">~/career/<span class="tab-active">klg-international</span></span>
+											<span class="exp-card__period">Apr 2017 — Mar 2018</span>
+										</header>
+										<div class="exp-card__body">
+											<h3 class="exp-card__role">IT Support Specialist</h3>
+											<div class="exp-card__company"><span class="exp-card__co">KLG International, Inc.</span> &middot; <span class="exp-card__loc">Parañaque City, Philippines</span></div>
+											<p class="exp-card__summary">
+												Provided technical support to internal teams — maintaining systems,
+												troubleshooting hardware and software issues, and keeping operations
+												running smoothly.
+											</p>
+											<ul class="exp-card__bullets">
+												<li>Supported network infrastructure and resolved user issues promptly
+													to minimize downtime across the organization.</li>
+												<li>Managed server maintenance, helpdesk ticketing, and hardware
+													troubleshooting for a multi-department office environment.</li>
+												<li>Built a strong technical foundation in Linux, networking, and PHP
+													that set the stage for a career in full-stack development.</li>
+											</ul>
+											<div class="exp-card__stack">
+												<span class="exp-chip">Linux</span>
+												<span class="exp-chip">Windows Server</span>
+												<span class="exp-chip">Networking</span>
+												<span class="exp-chip">PHP</span>
+												<span class="exp-chip">MySQL</span>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
+									</article>
+								</li>
+							</ol>
+						</div>
 
-							<!-- ── Education ── -->
-							<div class=”ctl-label ctl-label-edu animate-box”>
-								<span>Education</span>
-							</div>
-
-							<div class=”ctl-entry s-edu animate-box”>
-								<div class=”ctl-side”>
-									<span class=”ctl-year”>2013</span>
-									<span class=”ctl-dot ctl-dot-edu”><i class=”icon-graduation-cap”></i></span>
-								</div>
-								<div class=”ctl-card ctl-card-edu”>
-									<div class=”ctl-top”>
-										<h3 class=”ctl-title”>Bachelor's Degree</h3>
-										<span class=”ctl-sub”>Computer Programming / Programmer, General</span>
-										<span class=”ctl-sub”>Southern Leyte State University &nbsp;·&nbsp; 2013 – 2017</span>
-									</div>
-									<div class=”ctl-body”>
-										<p>🎓 Four years of turning theory into working code and coffee into survival fuel ☕.<br>
-										💡 Built a solid foundation in programming, databases, and software development — the kind that actually holds up years later in production.<br>
-										🤝 Collaborated on capstone projects, sharpened problem-solving skills, and graduated ready to build real things for real people.<br>
-										🏁 Left with a degree, a passion for clean code, and a healthy respect for deadlines.</p>
-										<div class=”ctl-tags”>
-											<span class=”t-tag t-tag-red”>C / C++</span>
-											<span class=”t-tag t-tag-cyan”>Java</span>
-											<span class=”t-tag”>PHP</span>
-											<span class=”t-tag t-tag-cyan”>MySQL</span>
-											<span class=”t-tag”>Networking</span>
+						<div class="exp-group">
+							<div class="exp-group__label">// education.log <span class="exp-group__count">1 entry</span></div>
+							<ol class="exp-list" role="list">
+								<li class="exp-item animate-box" data-year="2013 — 2017">
+									<span class="exp-item__dot exp-item__dot--edu" aria-hidden="true"></span>
+									<article class="exp-card exp-card--edu">
+										<header class="exp-card__chrome">
+											<span class="exp-card__dots"><i></i><i></i><i></i></span>
+											<span class="exp-card__path">~/education/<span class="tab-active">slsu-computer-programming</span></span>
+											<span class="exp-card__period">2013 — 2017</span>
+										</header>
+										<div class="exp-card__body">
+											<h3 class="exp-card__role">Bachelor's Degree <span class="exp-card__sub">Computer Programming / Programmer, General</span></h3>
+											<div class="exp-card__company"><span class="exp-card__co">Southern Leyte State University</span> &middot; <span class="exp-card__loc">Philippines</span></div>
+											<p class="exp-card__summary">
+												Four years building a solid foundation in programming, databases, and
+												software development — the kind that holds up years later in production.
+											</p>
+											<ul class="exp-card__bullets">
+												<li>Completed a capstone project applying the full development lifecycle
+													&mdash; requirements, design, implementation, and presentation.</li>
+												<li>Collaborated on team projects, sharpened problem-solving skills, and
+													graduated ready to build real things for real people.</li>
+											</ul>
+											<div class="exp-card__stack">
+												<span class="exp-chip">C / C++</span>
+												<span class="exp-chip">Java</span>
+												<span class="exp-chip">PHP</span>
+												<span class="exp-chip">MySQL</span>
+												<span class="exp-chip">Networking</span>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
-
+									</article>
+								</li>
+							</ol>
 						</div>
 					</div>
 				</div>
@@ -375,100 +682,176 @@
 				<div class="services-padding">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<h2>My Services</h2>
+							<h2>Services</h2>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-bargraph"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Web Development</h3>
-									<p>
-										Full-stack web applications built with Laravel and Vue.js.
-										From APIs to polished frontends — clean, scalable code that holds up in production.
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-mobile2"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Mobile App Dev</h3>
-									<p>
-										Cross-platform mobile apps with Flutter &amp; Dart.
-										One codebase, native performance on both iOS and Android — shipped fast, built right.
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-genius"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Vibe Coding</h3>
-									<p>
-										AI-assisted development at the speed of thought — using Claude, Cursor, and
-										modern AI tools to ship features faster without cutting corners on quality.
-									</p>
-								</div>
-							</div>
+					<div class="row animate-box">
+						<div class="col-md-10 col-md-offset-1 text-center">
+							<p class="services-intro">
+								What I deliver for teams &amp; clients — end-to-end engineering across the modern
+								web and mobile stack, with AI-assisted workflows where they create real leverage.
+							</p>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-search"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>API Integration</h3>
-									<p>
-										REST APIs, webhooks, and third-party service connections that just work.
-										Seamless data flow between your systems and the tools your business depends on.
-									</p>
+					<div class="row services-grid">
+						<div class="col-md-4 col-sm-6">
+							<article class="svc-card">
+								<header class="svc-card__head">
+									<span class="svc-card__num">01</span>
+									<div class="svc-card__heading">
+										<div class="svc-card__cmd">$ build &mdash;web</div>
+										<h3 class="svc-card__title">Full-Stack Web Development</h3>
+									</div>
+								</header>
+								<p class="svc-card__lead">Production web applications, end-to-end — from schema to deploy.</p>
+								<ul class="svc-card__deliverables">
+									<li>Vue.js single-page apps &amp; component libraries</li>
+									<li>Laravel back-ends with clean domain models</li>
+									<li>Database design, migrations, and query tuning</li>
+									<li>Authentication, authorization, and audit logging</li>
+								</ul>
+								<div class="svc-card__stack">
+									<span class="exp-chip">Vue.js</span>
+									<span class="exp-chip">Laravel</span>
+									<span class="exp-chip">MySQL</span>
+									<span class="exp-chip">REST</span>
 								</div>
-							</div>
+							</article>
 						</div>
 
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-briefcase"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>DevOps &amp; Cloud</h3>
-									<p>
-										Docker, Linux servers, and CI/CD pipelines that keep your apps running 24/7.
-										Deployment, monitoring, and infrastructure that doesn’t let you down.
-									</p>
+						<div class="col-md-4 col-sm-6">
+							<article class="svc-card">
+								<header class="svc-card__head">
+									<span class="svc-card__num">02</span>
+									<div class="svc-card__heading">
+										<div class="svc-card__cmd">$ flutter &mdash;ship</div>
+										<h3 class="svc-card__title">Mobile App Development <span class="svc-card__badge">Flutter</span></h3>
+									</div>
+								</header>
+								<p class="svc-card__lead">Single-codebase mobile apps that feel native on iOS and Android.</p>
+								<ul class="svc-card__deliverables">
+									<li>Flutter / Dart cross-platform builds</li>
+									<li>Offline-first sync &amp; local storage strategies</li>
+									<li>REST backend integration &amp; push notifications</li>
+									<li>Play Store &amp; App Store release pipelines</li>
+								</ul>
+								<div class="svc-card__stack">
+									<span class="exp-chip">Flutter</span>
+									<span class="exp-chip">Dart</span>
+									<span class="exp-chip">Firebase</span>
+									<span class="exp-chip">CI/CD</span>
 								</div>
-							</div>
+							</article>
 						</div>
 
-						<div class="col-md-4 text-center">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-chat"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Support</h3>
-									<p>
-										Ongoing maintenance to keep your website or app running smoothly.
-										Bug fixes, feature updates, and technical support — long after launch.
-									</p>
+						<div class="col-md-4 col-sm-6">
+							<article class="svc-card svc-card--ai">
+								<header class="svc-card__head">
+									<span class="svc-card__num">03</span>
+									<div class="svc-card__heading">
+										<div class="svc-card__cmd">$ claude &mdash;pair</div>
+										<h3 class="svc-card__title">AI-Assisted Delivery <span class="svc-card__badge svc-card__badge--ai">Claude</span></h3>
+									</div>
+								</header>
+								<p class="svc-card__lead">Compress delivery timelines without compromising on quality.</p>
+								<ul class="svc-card__deliverables">
+									<li>Pair-programming with Claude &amp; agentic tools</li>
+									<li>Rapid prototyping from a spec or rough idea</li>
+									<li>Large-scale refactors with safety nets</li>
+									<li>AI-augmented code review &amp; documentation</li>
+								</ul>
+								<div class="svc-card__stack">
+									<span class="exp-chip exp-chip--ai">Claude AI</span>
+									<span class="exp-chip">Cursor</span>
+									<span class="exp-chip">Vibe Coding</span>
 								</div>
-							</div>
+							</article>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<article class="svc-card">
+								<header class="svc-card__head">
+									<span class="svc-card__num">04</span>
+									<div class="svc-card__heading">
+										<div class="svc-card__cmd">$ api &mdash;design</div>
+										<h3 class="svc-card__title">API Design &amp; Integration</h3>
+									</div>
+								</header>
+								<p class="svc-card__lead">Reliable contracts that let teams and systems move independently.</p>
+								<ul class="svc-card__deliverables">
+									<li>RESTful API design &amp; documentation</li>
+									<li>Token-based auth (JWT, OAuth flows)</li>
+									<li>Third-party integrations &amp; webhooks</li>
+									<li>Versioning, rate-limiting, and error contracts</li>
+								</ul>
+								<div class="svc-card__stack">
+									<span class="exp-chip">REST</span>
+									<span class="exp-chip">JSON</span>
+									<span class="exp-chip">OAuth</span>
+									<span class="exp-chip">Postman</span>
+								</div>
+							</article>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<article class="svc-card">
+								<header class="svc-card__head">
+									<span class="svc-card__num">05</span>
+									<div class="svc-card__heading">
+										<div class="svc-card__cmd">$ ops &mdash;deploy</div>
+										<h3 class="svc-card__title">DevOps &amp; Cloud</h3>
+									</div>
+								</header>
+								<p class="svc-card__lead">Docker, Linux servers, and CI/CD pipelines that keep apps running 24/7.</p>
+								<ul class="svc-card__deliverables">
+									<li>Docker containerization &amp; Compose stacks</li>
+									<li>Linux server setup, hardening, and monitoring</li>
+									<li>Nginx / Apache reverse proxy configuration</li>
+									<li>CI/CD pipelines with automated testing &amp; deploy</li>
+								</ul>
+								<div class="svc-card__stack">
+									<span class="exp-chip">Docker</span>
+									<span class="exp-chip">Linux</span>
+									<span class="exp-chip">Nginx</span>
+									<span class="exp-chip">CI/CD</span>
+								</div>
+							</article>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<article class="svc-card">
+								<header class="svc-card__head">
+									<span class="svc-card__num">06</span>
+									<div class="svc-card__heading">
+										<div class="svc-card__cmd">$ ops &mdash;maintain</div>
+										<h3 class="svc-card__title">Maintenance &amp; Support</h3>
+									</div>
+								</header>
+								<p class="svc-card__lead">Post-launch engineering that keeps products healthy and fast.</p>
+								<ul class="svc-card__deliverables">
+									<li>Bug triage &amp; targeted fixes</li>
+									<li>Security patches &amp; dependency upgrades</li>
+									<li>Performance audits &amp; optimization</li>
+									<li>Incremental feature work &amp; backlog grooming</li>
+								</ul>
+								<div class="svc-card__stack">
+									<span class="exp-chip">Git</span>
+									<span class="exp-chip">Docker</span>
+									<span class="exp-chip">Linux</span>
+									<span class="exp-chip">Monitoring</span>
+								</div>
+							</article>
+						</div>
+					</div>
+
+					<div class="row services-cta animate-box">
+						<div class="col-md-12 text-center">
+							<p class="services-foot">
+								<span class="services-foot__prompt">&gt;</span>
+								<span class="services-foot__txt">Need something not on the list? Let&rsquo;s talk &mdash; happy to scope it together.</span>
+								<a href="#fh5co-started" class="btn btn-ghost btn-sm">Start a conversation &rarr;</a>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -482,157 +865,139 @@
 						<h2>Skills</h2>
 					</div>
 				</div>
-				<div class="row row-pb-md">
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="90"><span><strong>JavaScript</strong>90%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="88"><span><strong>PHP</strong>88%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="88"><span><strong>Laravel</strong>88%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="85"><span><strong>Vue.js</strong>85%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="85"><span><strong>API</strong>85%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="82"><span><strong>MySQL</strong>82%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="90"><span><strong>HTML5</strong>90%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="85"><span><strong>CSS3</strong>85%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="75"><span><strong>Flutter</strong>75%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="72"><span><strong>DevOps</strong>72%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="75"><span><strong>Node.js</strong>75%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="70"><span><strong>Docker</strong>70%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="88"><span><strong>Claude AI</strong>88%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="90"><span><strong>Git</strong>90%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="92"><span><strong>Vibe Coding</strong>92%</span></div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-						<div class="chart" data-percent="78"><span><strong>Flutter/Dart</strong>78%</span></div>
+				<div class="row animate-box">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						<p class="skills-intro">A pragmatic snapshot of where I spend most of my time. Levels indicate
+							hands-on production experience, not just familiarity.</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="progress-wrap">
-							<h3><span class="name-left">PHP / Laravel</span><span class="value-right">88%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-									aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width:88%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">JavaScript / Vue.js</span><span class="value-right">90%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-									aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">API Integration</span><span class="value-right">85%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-									aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">MySQL / Databases</span><span class="value-right">82%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-									aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" style="width:82%">
-								</div>
-							</div>
-						</div>
+
+				<div class="row skill-grid">
+					<div class="col-md-6 col-sm-6">
+						<section class="skill-card">
+							<header class="skill-card__head">
+								<span class="skill-card__icon">[ FE ]</span>
+								<h3 class="skill-card__title">Frontend</h3>
+								<span class="skill-card__count">5</span>
+							</header>
+							<ul class="skill-card__list">
+								<li><span class="skill-name">Vue.js</span><span class="skill-bar"><i data-lvl="90"></i></span><span class="skill-val" data-target="90">0</span></li>
+								<li><span class="skill-name">HTML5 / CSS3</span><span class="skill-bar"><i data-lvl="90"></i></span><span class="skill-val" data-target="90">0</span></li>
+								<li><span class="skill-name">JavaScript</span><span class="skill-bar"><i data-lvl="88"></i></span><span class="skill-val" data-target="88">0</span></li>
+								<li><span class="skill-name">Bootstrap</span><span class="skill-bar"><i data-lvl="85"></i></span><span class="skill-val" data-target="85">0</span></li>
+								<li><span class="skill-name">Figma / UI</span><span class="skill-bar"><i data-lvl="78"></i></span><span class="skill-val" data-target="78">0</span></li>
+							</ul>
+						</section>
 					</div>
-					<div class="col-md-6">
-						<div class="progress-wrap">
-							<h3><span class="name-left">Flutter</span><span class="value-right">75%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
-									aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">DevOps</span><span class="value-right">72%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-striped active" role="progressbar"
-									aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width:72%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">HTML5 / CSS3</span><span class="value-right">90%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-									aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">Claude AI</span><span class="value-right">88%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-ai progress-bar-striped active" role="progressbar"
-									aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width:88%">
-								</div>
-							</div>
-						</div>
-						<div class="progress-wrap">
-							<h3><span class="name-left">Vibe Coding</span><span class="value-right">92%</span></h3>
-							<div class="progress">
-								<div class="progress-bar progress-bar-6 progress-bar-striped active" role="progressbar"
-									aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="width:92%">
-								</div>
-							</div>
-						</div>
+
+					<div class="col-md-6 col-sm-6">
+						<section class="skill-card">
+							<header class="skill-card__head">
+								<span class="skill-card__icon">[ BE ]</span>
+								<h3 class="skill-card__title">Backend</h3>
+								<span class="skill-card__count">5</span>
+							</header>
+							<ul class="skill-card__list">
+								<li><span class="skill-name">Laravel</span><span class="skill-bar"><i data-lvl="88"></i></span><span class="skill-val" data-target="88">0</span></li>
+								<li><span class="skill-name">PHP</span><span class="skill-bar"><i data-lvl="88"></i></span><span class="skill-val" data-target="88">0</span></li>
+								<li><span class="skill-name">MySQL / SQL</span><span class="skill-bar"><i data-lvl="85"></i></span><span class="skill-val" data-target="85">0</span></li>
+								<li><span class="skill-name">REST &amp; API Integration</span><span class="skill-bar"><i data-lvl="88"></i></span><span class="skill-val" data-target="88">0</span></li>
+								<li><span class="skill-name">Node.js</span><span class="skill-bar"><i data-lvl="75"></i></span><span class="skill-val" data-target="75">0</span></li>
+							</ul>
+						</section>
+					</div>
+
+					<div class="col-md-6 col-sm-6">
+						<section class="skill-card">
+							<header class="skill-card__head">
+								<span class="skill-card__icon">[ MB ]</span>
+								<h3 class="skill-card__title">Mobile</h3>
+								<span class="skill-card__count">2</span>
+							</header>
+							<ul class="skill-card__list">
+								<li><span class="skill-name">Flutter</span><span class="skill-bar"><i data-lvl="75" data-color="brand"></i></span><span class="skill-val" data-target="75">0</span></li>
+								<li><span class="skill-name">Dart</span><span class="skill-bar"><i data-lvl="72" data-color="brand"></i></span><span class="skill-val" data-target="72">0</span></li>
+							</ul>
+						</section>
+					</div>
+
+					<div class="col-md-6 col-sm-6">
+						<section class="skill-card">
+							<header class="skill-card__head">
+								<span class="skill-card__icon">[ AI ]</span>
+								<h3 class="skill-card__title">AI &amp; Tools</h3>
+								<span class="skill-card__count">5</span>
+							</header>
+							<ul class="skill-card__list">
+								<li><span class="skill-name">Claude AI</span><span class="skill-bar"><i data-lvl="92" data-color="ai"></i></span><span class="skill-val" data-target="92">0</span></li>
+								<li><span class="skill-name">AI-Assisted Delivery</span><span class="skill-bar"><i data-lvl="88" data-color="ai"></i></span><span class="skill-val" data-target="88">0</span></li>
+								<li><span class="skill-name">Git / GitHub</span><span class="skill-bar"><i data-lvl="90"></i></span><span class="skill-val" data-target="90">0</span></li>
+								<li><span class="skill-name">Docker</span><span class="skill-bar"><i data-lvl="72"></i></span><span class="skill-val" data-target="72">0</span></li>
+								<li><span class="skill-name">Linux / DevOps</span><span class="skill-bar"><i data-lvl="75"></i></span><span class="skill-val" data-target="75">0</span></li>
+							</ul>
+						</section>
 					</div>
 				</div>
 
 				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading fh5co-heading-sm" style="margin-top: 2em;">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading fh5co-heading-sm" style="margin-top: 2em;" data-section="stack.yaml">
 						<h2>Tools &amp; Stack</h2>
 					</div>
 				</div>
 				<div class="row animate-box">
-					<div class="col-md-12 text-center">
-						<div class="tools-grid">
-							<span class="tool-badge tool-ai">Claude AI</span>
-							<span class="tool-badge tool-vibe">Vibe Coding</span>
-							<span class="tool-badge tool-flutter">Flutter / Dart</span>
-							<span class="tool-badge">Docker</span>
-							<span class="tool-badge">Git</span>
-							<span class="tool-badge">VS Code</span>
-							<span class="tool-badge">Cursor</span>
-							<span class="tool-badge">Postman</span>
-							<span class="tool-badge">Composer</span>
-							<span class="tool-badge">npm / Vite</span>
-							<span class="tool-badge">Linux</span>
-							<span class="tool-badge">GitHub</span>
-							<span class="tool-badge">REST APIs</span>
-							<span class="tool-badge">DevOps</span>
+					<div class="col-md-12">
+						<div class="stack-grid">
+							<div class="stack-group">
+								<div class="stack-group__label"># ai &middot; assistants</div>
+								<div class="stack-group__items">
+									<span class="tool-badge tool-ai">Claude AI</span>
+									<span class="tool-badge tool-ai">Claude Code</span>
+									<span class="tool-badge tool-ai">GitHub Copilot</span>
+									<span class="tool-badge tool-ai">AI-Assisted Dev</span>
+									<span class="tool-badge tool-ai">Vibe Coding</span>
+								</div>
+							</div>
+							<div class="stack-group">
+								<div class="stack-group__label"># mobile</div>
+								<div class="stack-group__items">
+									<span class="tool-badge tool-mobile">Flutter</span>
+									<span class="tool-badge tool-mobile">Dart</span>
+									<span class="tool-badge tool-mobile">Android Studio</span>
+									<span class="tool-badge tool-mobile">Firebase</span>
+								</div>
+							</div>
+							<div class="stack-group">
+								<div class="stack-group__label"># dev &middot; tooling</div>
+								<div class="stack-group__items">
+									<span class="tool-badge">VS Code</span>
+									<span class="tool-badge">Cursor</span>
+									<span class="tool-badge">Git</span>
+									<span class="tool-badge">GitHub</span>
+									<span class="tool-badge">Docker</span>
+									<span class="tool-badge">npm / Vite</span>
+									<span class="tool-badge">Composer</span>
+									<span class="tool-badge">Linux</span>
+								</div>
+							</div>
+							<div class="stack-group">
+								<div class="stack-group__label"># design &middot; api</div>
+								<div class="stack-group__items">
+									<span class="tool-badge">Figma</span>
+									<span class="tool-badge">Postman</span>
+									<span class="tool-badge">REST APIs</span>
+									<span class="tool-badge">Swagger</span>
+								</div>
+							</div>
+							<div class="stack-group">
+								<div class="stack-group__label"># infra &middot; cloud</div>
+								<div class="stack-group__items">
+									<span class="tool-badge">Nginx</span>
+									<span class="tool-badge">Ubuntu / Debian</span>
+									<span class="tool-badge">MySQL</span>
+									<span class="tool-badge">Redis</span>
+									<span class="tool-badge">SFTP / SSH</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -646,60 +1011,136 @@
 						<h2>Work</h2>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="#" class="work"
-							style="background-image: url(images/work-logistics.svg);">
-							<div class="desc">
-								<h3>Logistics Web App</h3>
-								<span>AAI Worldwide Logistics</span>
-							</div>
-						</a>
+				<div class="row animate-box">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						<p class="work-intro">Production builds and internal platforms across logistics, enterprise, courier, and IT — shipped across 3 countries.</p>
 					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="#" class="work"
-							style="background-image: url(images/work-enterprise.svg);">
-							<div class="desc">
-								<h3>Enterprise ERP System</h3>
-								<span>CRESCO Software Technology</span>
-							</div>
-						</a>
+				</div>
+				<div class="row work-grid" id="work-grid">
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="#" class="proj-card__link">
+								<div class="proj-card__thumb" style="background-image: url(images/work-logistics.svg);">
+									<span class="proj-card__status proj-card__status--live">LIVE</span>
+								</div>
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">logistics-platform</span></div>
+									<h3 class="proj-card__title">Logistics Web Platform</h3>
+									<p class="proj-card__meta">AAI Worldwide Logistics &middot; Philippines</p>
+									<div class="proj-card__stack">
+										<span class="exp-chip">Laravel</span>
+										<span class="exp-chip">Vue.js</span>
+										<span class="exp-chip">MySQL</span>
+									</div>
+									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
 					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="#" class="work"
-							style="background-image: url(images/work-freelance.svg);">
-							<div class="desc">
-								<h3>Full-Stack Web Projects</h3>
-								<span>TersusNet — Freelance</span>
-							</div>
-						</a>
+
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="#" class="proj-card__link">
+								<div class="proj-card__thumb" style="background-image: url(images/work-enterprise.svg);">
+									<span class="proj-card__status proj-card__status--live">LIVE</span>
+								</div>
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">enterprise-erp</span></div>
+									<h3 class="proj-card__title">Enterprise ERP System</h3>
+									<p class="proj-card__meta">CRESCO Software Technology &middot; Dubai, UAE</p>
+									<div class="proj-card__stack">
+										<span class="exp-chip">Laravel</span>
+										<span class="exp-chip">Vue.js</span>
+										<span class="exp-chip">PostgreSQL</span>
+									</div>
+									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
 					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="#" class="work"
-							style="background-image: url(images/work-appdev.svg);">
-							<div class="desc">
-								<h3>App Dev Platform</h3>
-								<span>AAI Worldwide Logistics</span>
-							</div>
-						</a>
+
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="#" class="proj-card__link">
+								<div class="proj-card__thumb" style="background-image: url(images/work-freelance.svg);">
+									<span class="proj-card__status proj-card__status--archive">FREELANCE</span>
+								</div>
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">freelance-web</span></div>
+									<h3 class="proj-card__title">Full-Stack Web Projects</h3>
+									<p class="proj-card__meta">TersusNet &middot; Remote</p>
+									<div class="proj-card__stack">
+										<span class="exp-chip">Laravel</span>
+										<span class="exp-chip">Vue.js</span>
+										<span class="exp-chip">Node.js</span>
+									</div>
+									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
 					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="#" class="work"
-							style="background-image: url(images/work-courier.svg);">
-							<div class="desc">
-								<h3>Courier Operations App</h3>
-								<span>Black Arrow Express</span>
-							</div>
-						</a>
+
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="#" class="proj-card__link">
+								<div class="proj-card__thumb" style="background-image: url(images/work-appdev.svg);">
+									<span class="proj-card__status proj-card__status--live">LIVE</span>
+								</div>
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">aai-app-platform</span></div>
+									<h3 class="proj-card__title">App Dev Platform</h3>
+									<p class="proj-card__meta">AAI Worldwide Logistics &middot; Philippines</p>
+									<div class="proj-card__stack">
+										<span class="exp-chip">Laravel</span>
+										<span class="exp-chip">Vue.js</span>
+										<span class="exp-chip">Docker</span>
+									</div>
+									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
 					</div>
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="#" class="work"
-							style="background-image: url(images/work-itsupport.svg);">
-							<div class="desc">
-								<h3>IT Systems &amp; Support</h3>
-								<span>KLG International, Inc.</span>
-							</div>
-						</a>
+
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="#" class="proj-card__link">
+								<div class="proj-card__thumb" style="background-image: url(images/work-courier.svg);">
+									<span class="proj-card__status proj-card__status--archive">ARCHIVE</span>
+								</div>
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">courier-ops-app</span></div>
+									<h3 class="proj-card__title">Courier Operations App</h3>
+									<p class="proj-card__meta">Black Arrow Express &middot; Philippines</p>
+									<div class="proj-card__stack">
+										<span class="exp-chip">Laravel</span>
+										<span class="exp-chip">PHP</span>
+										<span class="exp-chip">MySQL</span>
+									</div>
+									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="#" class="proj-card__link">
+								<div class="proj-card__thumb" style="background-image: url(images/work-itsupport.svg);">
+									<span class="proj-card__status proj-card__status--archive">ARCHIVE</span>
+								</div>
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">it-systems-support</span></div>
+									<h3 class="proj-card__title">IT Systems &amp; Support</h3>
+									<p class="proj-card__meta">KLG International, Inc. &middot; Parañaque City</p>
+									<div class="proj-card__stack">
+										<span class="exp-chip">Linux</span>
+										<span class="exp-chip">Networking</span>
+										<span class="exp-chip">PHP</span>
+									</div>
+									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
 					</div>
 				</div>
 			</div>
@@ -709,10 +1150,10 @@
 			<div class="container">
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center">
-						<h2>Something Awesome is Brewing... ☕</h2>
+						<h2>Something Awesome is Brewing&hellip; &#9749;</h2>
 						<p style="margin-bottom: 0px!important;">
-							Still under construction — like a pizza in the oven or a feature waiting to be deployed.
-							Check back soon for more magic, code, and possibly snacks. 🚧👨‍💻
+							Still under construction &mdash; like a pizza in the oven or a feature waiting to be deployed.
+							Check back soon for more magic, code, and possibly snacks. &#128679;&#128104;&#8205;&#128187;
 						</p>
 					</div>
 				</div>
@@ -723,19 +1164,78 @@
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Hire Me!</h2>
-						<p>
-							Need a reliable application developer who delivers clean, scalable, and production-ready
-							solutions? With 8+ years across logistics, enterprise, and freelance projects — I’m your dev.
-						</p>
-						<p><a href="mailto:nilobesingg1996@gmail.com" class="btn btn-default btn-lg">Let’s Work Together</a></p>
-						<ul class="fh5co-social-icons">
-							<li><a href="#" target="_blank" rel="noopener noreferrer"><i
-										class="btn btn-default btn-lg icon-github2"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer"><i
-										class="btn btn-default btn-lg icon-linkedin2"></i></a></li>
-						</ul>
+					<div class="col-md-10 col-md-offset-1">
+						<div class="cta-card">
+							<header class="cta-card__chrome">
+								<span class="cta-card__dots"><i></i><i></i><i></i></span>
+								<span class="cta-card__path">~/contact/<span class="tab-active">availability.md</span></span>
+								<span class="cta-status"><span class="cta-status__dot"></span> open to opportunities &middot; 2026</span>
+							</header>
+							<div class="cta-card__body">
+								<div class="cta-card__intro">
+									<div class="cta-card__label">// hire-me</div>
+									<h2 class="cta-card__title">Let&rsquo;s Work Together</h2>
+									<p class="cta-card__lead">
+										Available for <strong>full-time</strong>, <strong>contract</strong>, or
+										<strong>freelance</strong> engagements &mdash; <strong>remote</strong>, hybrid,
+										or onsite. If you&rsquo;re hiring an application developer who can own
+										features end-to-end and ship reliably, I&rsquo;d be glad to talk.
+									</p>
+								</div>
+
+								<div class="cta-email">
+									<span class="cta-email__icon">@</span>
+									<a class="cta-email__addr" href="mailto:nbesingga@gmail.com">nbesingga@gmail.com</a>
+									<button class="cta-email__copy cfg-copy" type="button" data-copy="nbesingga@gmail.com" aria-label="copy email">copy</button>
+								</div>
+
+								<div class="cta-actions">
+									<a href="mailto:nbesingga@gmail.com" class="cta-btn cta-btn--primary">
+										<span class="cta-btn__icon"><i class="icon-envelope"></i></span>
+										<span class="cta-btn__label">
+											<span class="cta-btn__caption">Get in touch</span>
+											<span class="cta-btn__sub">primary channel &middot; fastest reply</span>
+										</span>
+										<span class="cta-btn__arrow">&rarr;</span>
+									</a>
+									<a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer" class="cta-btn">
+										<span class="cta-btn__icon"><i class="icon-linkedin2"></i></span>
+										<span class="cta-btn__label">
+											<span class="cta-btn__caption">View LinkedIn</span>
+											<span class="cta-btn__sub">profile &middot; recommendations</span>
+										</span>
+										<span class="cta-btn__arrow">&rarr;</span>
+									</a>
+									<a href="resume.pdf" download class="cta-btn">
+										<span class="cta-btn__icon"><i class="icon-download"></i></span>
+										<span class="cta-btn__label">
+											<span class="cta-btn__caption">Download Resume</span>
+											<span class="cta-btn__sub">PDF &middot; one-pager</span>
+										</span>
+										<span class="cta-btn__arrow">&darr;</span>
+									</a>
+								</div>
+
+								<div class="cta-meta">
+									<div class="cta-meta__item">
+										<span class="cta-meta__k">timezone</span>
+										<span class="cta-meta__v">GMT+8 &middot; PHT</span>
+									</div>
+									<div class="cta-meta__item">
+										<span class="cta-meta__k">location</span>
+										<span class="cta-meta__v">Dolho Bato, Leyte &middot; PH</span>
+									</div>
+									<div class="cta-meta__item">
+										<span class="cta-meta__k">stack</span>
+										<span class="cta-meta__v">laravel &middot; vue &middot; flutter</span>
+									</div>
+									<div class="cta-meta__item">
+										<span class="cta-meta__k">response</span>
+										<span class="cta-meta__v">&lt; 24 hours</span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -748,7 +1248,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<p>&copy; 2026 Nilo Besingga. All rights reserved.<br>
-						Crafted with 💻 + ☕ | Portfolio powered by clean code and curiosity.</p>
+						Crafted with &#128187; + &#9749; &nbsp;&middot;&nbsp; Powered by clean code, caffeine, and Claude AI.</p>
 				</div>
 			</div>
 		</div>
@@ -772,6 +1272,8 @@
 	<script src="js/jquery.easypiechart.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<!-- Tech FX -->
+	<script src="js/tech-fx.js"></script>
 
 </body>
 
