@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <pattern id="dots4" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.7" fill="rgba(0,212,255,0.08)"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(0,212,255,0.5)"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#0a0e1a"/>
+  <rect width="600" height="400" fill="url(#dots4)"/>
+  <!-- Header -->
+  <rect width="600" height="44" fill="#0d1428"/>
+  <rect width="600" height="1" y="44" fill="rgba(0,212,255,0.2)"/>
+  <text x="20" y="27" font-family="monospace" font-size="10" fill="#00d4ff" font-weight="bold">AAI · Application Architecture</text>
+  <text x="400" y="27" font-family="monospace" font-size="8" fill="rgba(0,212,255,0.4)">System Design · Logistics Platform</text>
+  <rect x="530" y="12" width="58" height="20" rx="3" fill="rgba(0,255,120,0.1)" stroke="rgba(0,255,120,0.25)" stroke-width="1"/>
+  <text x="559" y="25" font-family="monospace" font-size="7" fill="#00ff78" text-anchor="middle">v3.4 LIVE</text>
+  <!-- Architecture diagram -->
+  <!-- Client layer -->
+  <text x="50" y="75" font-family="monospace" font-size="7" fill="rgba(0,212,255,0.35)">CLIENT LAYER</text>
+  <rect x="20" y="82" width="80" height="38" rx="5" fill="rgba(0,212,255,0.07)" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
+  <text x="60" y="98" font-family="monospace" font-size="7" fill="#00d4ff" text-anchor="middle">Web Browser</text>
+  <text x="60" y="111" font-family="monospace" font-size="6" fill="rgba(0,212,255,0.4)" text-anchor="middle">Vue.js SPA</text>
+  <rect x="110" y="82" width="80" height="38" rx="5" fill="rgba(0,212,255,0.07)" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
+  <text x="150" y="98" font-family="monospace" font-size="7" fill="#00d4ff" text-anchor="middle">Mobile App</text>
+  <text x="150" y="111" font-family="monospace" font-size="6" fill="rgba(0,212,255,0.4)" text-anchor="middle">Flutter</text>
+  <!-- Arrows client to API -->
+  <line x1="60" y1="120" x2="60" y2="148" stroke="rgba(0,212,255,0.35)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="150" y1="120" x2="150" y2="148" stroke="rgba(0,212,255,0.35)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- API Gateway -->
+  <text x="50" y="145" font-family="monospace" font-size="7" fill="rgba(0,212,255,0.35)">API GATEWAY</text>
+  <rect x="20" y="152" width="170" height="38" rx="5" fill="rgba(0,212,255,0.1)" stroke="rgba(0,212,255,0.4)" stroke-width="1.5"/>
+  <text x="105" y="168" font-family="monospace" font-size="8" fill="#00d4ff" text-anchor="middle" font-weight="bold">Laravel REST API</text>
+  <text x="105" y="181" font-family="monospace" font-size="6" fill="rgba(0,212,255,0.5)" text-anchor="middle">Auth · Rate Limit · Routing</text>
+  <!-- Arrows API to services -->
+  <line x1="105" y1="190" x2="105" y2="218" stroke="rgba(0,212,255,0.35)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="60" y1="190" x2="40" y2="218" stroke="rgba(0,212,255,0.25)" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="150" y1="190" x2="170" y2="218" stroke="rgba(0,212,255,0.25)" stroke-width="1" marker-end="url(#arrow)"/>
+  <!-- Services layer -->
+  <text x="16" y="215" font-family="monospace" font-size="7" fill="rgba(0,212,255,0.35)">SERVICES</text>
+  <rect x="16" y="222" width="68" height="38" rx="5" fill="rgba(168,85,247,0.07)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="50" y="238" font-family="monospace" font-size="7" fill="#a855f7" text-anchor="middle">Shipment</text>
+  <text x="50" y="250" font-family="monospace" font-size="6" fill="rgba(168,85,247,0.4)" text-anchor="middle">Service</text>
+  <rect x="91" y="222" width="68" height="38" rx="5" fill="rgba(0,255,120,0.06)" stroke="rgba(0,255,120,0.25)" stroke-width="1"/>
+  <text x="125" y="238" font-family="monospace" font-size="7" fill="#00ff78" text-anchor="middle">Inventory</text>
+  <text x="125" y="250" font-family="monospace" font-size="6" fill="rgba(0,255,120,0.4)" text-anchor="middle">Service</text>
+  <rect x="166" y="222" width="68" height="38" rx="5" fill="rgba(255,144,0,0.06)" stroke="rgba(255,144,0,0.25)" stroke-width="1"/>
+  <text x="200" y="238" font-family="monospace" font-size="7" fill="#FF9000" text-anchor="middle">Reporting</text>
+  <text x="200" y="250" font-family="monospace" font-size="6" fill="rgba(255,144,0,0.4)" text-anchor="middle">Service</text>
+  <!-- Arrows to DB -->
+  <line x1="50" y1="260" x2="50" y2="290" stroke="rgba(0,212,255,0.25)" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="125" y1="260" x2="125" y2="290" stroke="rgba(0,212,255,0.25)" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="200" y1="260" x2="200" y2="290" stroke="rgba(0,212,255,0.25)" stroke-width="1" marker-end="url(#arrow)"/>
+  <!-- Database layer -->
+  <text x="16" y="287" font-family="monospace" font-size="7" fill="rgba(0,212,255,0.35)">DATA LAYER</text>
+  <rect x="16" y="293" width="80" height="38" rx="5" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.2)" stroke-width="1"/>
+  <text x="56" y="309" font-family="monospace" font-size="7" fill="#00d4ff" text-anchor="middle">MySQL DB</text>
+  <text x="56" y="321" font-family="monospace" font-size="6" fill="rgba(0,212,255,0.35)" text-anchor="middle">Primary</text>
+  <rect x="104" y="293" width="80" height="38" rx="5" fill="rgba(255,144,0,0.06)" stroke="rgba(255,144,0,0.2)" stroke-width="1"/>
+  <text x="144" y="309" font-family="monospace" font-size="7" fill="#FF9000" text-anchor="middle">Redis Cache</text>
+  <text x="144" y="321" font-family="monospace" font-size="6" fill="rgba(255,144,0,0.35)" text-anchor="middle">Sessions/Queue</text>
+  <!-- External services -->
+  <text x="16" y="358" font-family="monospace" font-size="7" fill="rgba(0,212,255,0.35)">INFRA</text>
+  <rect x="16" y="363" width="50" height="25" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="41" y="378" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.35)" text-anchor="middle">Docker</text>
+  <rect x="72" y="363" width="50" height="25" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="97" y="378" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.35)" text-anchor="middle">Nginx</text>
+  <rect x="128" y="363" width="50" height="25" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="153" y="378" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.35)" text-anchor="middle">Ubuntu</text>
+  <!-- Right panel: API endpoints -->
+  <rect x="248" y="55" width="340" height="330" rx="6" fill="rgba(0,0,0,0.3)" stroke="rgba(0,212,255,0.1)" stroke-width="1"/>
+  <text x="260" y="72" font-family="monospace" font-size="8" fill="rgba(0,212,255,0.5)">API Endpoints · v3.4</text>
+  <rect x="248" y="76" width="340" height="1" fill="rgba(0,212,255,0.1)"/>
+  <!-- Endpoint rows -->
+  <rect x="256" y="82" width="36" height="12" rx="2" fill="rgba(0,255,120,0.15)"/>
+  <text x="274" y="91" font-family="monospace" font-size="6" fill="#00ff78" text-anchor="middle">GET</text>
+  <text x="300" y="91" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/shipments</text>
+  <rect x="256" y="100" width="44" height="12" rx="2" fill="rgba(0,212,255,0.15)"/>
+  <text x="278" y="109" font-family="monospace" font-size="6" fill="#00d4ff" text-anchor="middle">POST</text>
+  <text x="308" y="109" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/shipments</text>
+  <rect x="256" y="118" width="40" height="12" rx="2" fill="rgba(252,163,38,0.15)"/>
+  <text x="276" y="127" font-family="monospace" font-size="6" fill="rgba(252,163,38,0.8)" text-anchor="middle">PUT</text>
+  <text x="304" y="127" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/shipments/&#123;id&#125;</text>
+  <rect x="256" y="136" width="50" height="12" rx="2" fill="rgba(255,80,80,0.15)"/>
+  <text x="281" y="145" font-family="monospace" font-size="6" fill="rgba(255,80,80,0.8)" text-anchor="middle">DELETE</text>
+  <text x="314" y="145" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/shipments/&#123;id&#125;</text>
+  <rect x="248" y="156" width="340" height="1" fill="rgba(0,212,255,0.06)"/>
+  <rect x="256" y="162" width="36" height="12" rx="2" fill="rgba(0,255,120,0.15)"/>
+  <text x="274" y="171" font-family="monospace" font-size="6" fill="#00ff78" text-anchor="middle">GET</text>
+  <text x="300" y="171" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/warehouses</text>
+  <rect x="256" y="180" width="36" height="12" rx="2" fill="rgba(0,255,120,0.15)"/>
+  <text x="274" y="189" font-family="monospace" font-size="6" fill="#00ff78" text-anchor="middle">GET</text>
+  <text x="300" y="189" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/inventory</text>
+  <rect x="256" y="198" width="44" height="12" rx="2" fill="rgba(0,212,255,0.15)"/>
+  <text x="278" y="207" font-family="monospace" font-size="6" fill="#00d4ff" text-anchor="middle">POST</text>
+  <text x="308" y="207" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/inventory/receive</text>
+  <rect x="248" y="218" width="340" height="1" fill="rgba(0,212,255,0.06)"/>
+  <rect x="256" y="224" width="36" height="12" rx="2" fill="rgba(0,255,120,0.15)"/>
+  <text x="274" y="233" font-family="monospace" font-size="6" fill="#00ff78" text-anchor="middle">GET</text>
+  <text x="300" y="233" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/reports/daily</text>
+  <rect x="256" y="242" width="36" height="12" rx="2" fill="rgba(0,255,120,0.15)"/>
+  <text x="274" y="251" font-family="monospace" font-size="6" fill="#00ff78" text-anchor="middle">GET</text>
+  <text x="300" y="251" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/auth/me</text>
+  <rect x="256" y="260" width="44" height="12" rx="2" fill="rgba(0,212,255,0.15)"/>
+  <text x="278" y="269" font-family="monospace" font-size="6" fill="#00d4ff" text-anchor="middle">POST</text>
+  <text x="308" y="269" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.5)">/api/v1/auth/login</text>
+  <!-- Response sample -->
+  <rect x="256" y="282" width="324" height="88" rx="4" fill="rgba(0,0,0,0.4)" stroke="rgba(0,212,255,0.08)" stroke-width="1"/>
+  <text x="264" y="296" font-family="monospace" font-size="6" fill="rgba(0,212,255,0.4)">// Sample response: GET /api/v1/shipments</text>
+  <text x="264" y="309" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.35)">&#123; "status": "ok", "data": [</text>
+  <text x="264" y="321" font-family="monospace" font-size="6" fill="rgba(252,163,38,0.5)">   &#123; "id": 101, "tracking": "SH-101",</text>
+  <text x="264" y="333" font-family="monospace" font-size="6" fill="rgba(252,163,38,0.5)">     "status": "in_transit",</text>
+  <text x="264" y="345" font-family="monospace" font-size="6" fill="rgba(252,163,38,0.5)">     "destination": "Cebu City" &#125;</text>
+  <text x="264" y="357" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.25)">  ], "meta": &#123; "total": 1842 &#125; &#125;</text>
+  <!-- Stack footer -->
+  <rect x="0" y="376" width="600" height="24" fill="rgba(0,0,0,0.5)"/>
+  <rect x="0" y="376" width="600" height="1" fill="rgba(0,212,255,0.12)"/>
+  <text x="12" y="391" font-family="monospace" font-size="7" fill="rgba(0,212,255,0.4)">Stack: Laravel · Vue.js · MySQL · Redis · Docker · Nginx</text>
+</svg>
