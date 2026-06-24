@@ -5782,16 +5782,20 @@ body.theme-sunset {
 
 /* ─── Work grid: 3-col equal-height cards ─────────────────────────────────── */
 .work-grid {
-  display: grid;
+  display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
+.work-grid:before, .work-grid:after { display: none !important; }
 .work-grid > [class*="col-"] {
   width: 100% !important;
   max-width: 100% !important;
   flex: 0 0 100% !important;
   padding: 0 !important;
   margin-bottom: 0 !important;
+  float: none !important;
 }
 .work-grid .proj-card {
   height: 100%;
@@ -5815,15 +5819,19 @@ body.theme-sunset {
 
 /* ─── Open Source grid: 3-col equal-height cards ──────────────────────────── */
 .oss-grid {
-  display: grid;
+  display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
+.oss-grid:before, .oss-grid:after { display: none !important; }
 .oss-grid > [class*="col-"] {
   width: 100% !important;
   max-width: 100% !important;
   flex: 0 0 100% !important;
   padding: 0 !important;
+  float: none !important;
 }
 .oss-grid .proj-card {
   height: 100%;
@@ -5844,3 +5852,7 @@ body.theme-sunset {
 @media (max-width: 599px) {
   .oss-grid { grid-template-columns: 1fr; }
 }
+
+/* ─── Prevent grid overflow ──────────────────────────────────────────────── */
+#fh5co-work .container { overflow: hidden; }
+
