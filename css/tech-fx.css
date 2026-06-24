@@ -5780,7 +5780,7 @@ body.theme-sunset {
   text-shadow: none !important;
 }
 
-/* ─── Open Source grid: 3-col equal-height cards ──────────────────────────── */
+/* ─── Work grid: 3-col equal-height cards ─────────────────────────────────── */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -5791,10 +5791,11 @@ body.theme-sunset {
   max-width: 100% !important;
   flex: 0 0 100% !important;
   padding: 0 !important;
+  margin-bottom: 0 !important;
 }
 .work-grid .proj-card {
   height: 100%;
-  min-height: 280px;
+  min-height: 340px;
 }
 .work-grid .proj-card__link {
   height: 100%;
@@ -5810,4 +5811,36 @@ body.theme-sunset {
 }
 @media (max-width: 599px) {
   .work-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Open Source grid: 3-col equal-height cards ──────────────────────────── */
+.oss-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.oss-grid > [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  padding: 0 !important;
+}
+.oss-grid .proj-card {
+  height: 100%;
+  min-height: 280px;
+}
+.oss-grid .proj-card__link {
+  height: 100%;
+}
+.oss-grid .proj-card__body {
+  height: 100%;
+}
+.oss-grid .proj-card__stack {
+  flex: 1;
+}
+@media (max-width: 991px) {
+  .oss-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 599px) {
+  .oss-grid { grid-template-columns: 1fr; }
 }
