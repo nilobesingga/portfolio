@@ -1,38 +1,35 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Nilo Besingga — Application Developer &amp; Vibe Coder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nilo Besingga — Application Developer</title>
 	<meta name="description" content="Application Developer with 8+ years building production web and mobile applications. Specializes in Laravel, Vue.js, Flutter, and AI-assisted delivery with Claude. Based in the Philippines — open to remote, hybrid, or onsite roles." />
 	<meta name="author" content="Nilo Besingga" />
 	<meta name="robots" content="index, follow" />
 	<meta name="keywords" content="Nilo Besingga, Application Developer, Full-Stack Developer, Mobile App Developer, Flutter, Vue.js, Laravel, Claude AI, Philippines Developer, Remote Developer, Web Developer" />
-	<meta name="theme-color" content="#050814" />
+	<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)" />
 
-	<!-- Theme bootstrap: applies stored/preferred theme before paint to prevent FOUC -->
+	<!-- Apply stored / preferred theme before first paint -->
 	<script>
 		(function () {
+			var theme;
 			try {
 				var stored = localStorage.getItem('portfolio.theme');
-				var theme;
-				if (stored === 'light' || stored === 'dark') {
-					theme = stored;
-				} else {
-					theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
-				}
-				document.documentElement.setAttribute('data-theme', theme);
-			} catch (e) {
-				document.documentElement.setAttribute('data-theme', 'dark');
+				if (stored === 'light' || stored === 'dark') theme = stored;
+			} catch (e) { /* storage unavailable */ }
+			if (!theme) {
+				theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
 			}
+			document.documentElement.setAttribute('data-theme', theme);
 		})();
 	</script>
 
 	<meta property="og:type" content="website" />
 	<meta property="og:locale" content="en_US" />
-	<meta property="og:title" content="Nilo Besingga — Application Developer &amp; Vibe Coder" />
+	<meta property="og:title" content="Nilo Besingga — Application Developer" />
 	<meta property="og:image" content="images/1615352107595.jpg" />
 	<meta property="og:image:alt" content="Nilo Besingga — Application Developer" />
 	<meta property="og:site_name" content="Nilo Besingga Portfolio" />
@@ -42,7 +39,6 @@
 	<meta name="twitter:image" content="images/1615352107595.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
 
-	<!-- JSON-LD: Person schema -->
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
@@ -73,1956 +69,1103 @@
 	}
 	</script>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono|Kaushan+Script|Orbitron:400,500,700,900|JetBrains+Mono:400,500,700&display=swap" rel="stylesheet">
-	<link rel="icon" href="images/logo.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" href="images/logo.png">
 	<link rel="apple-touch-icon" href="images/logo.png">
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Tech FX layer  -->
-	<link rel="stylesheet" href="css/tech-fx.css">
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
+	<link rel="stylesheet" href="css/site.css">
 </head>
 
 <body>
 
-	<a class="skip-link" href="#fh5co-about">Skip to content</a>
+	<!-- Icon sprite -->
+	<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+		<symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+		<symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+		<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+		<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></symbol>
+		<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+		<symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+		<symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5m-6 6 6-6 6 6"/></symbol>
+		<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+		<symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></symbol>
+		<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+		<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+		<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+		<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+		<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+	</svg>
 
-	<nav id="fh5co-nav" aria-label="primary">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<a class="fh5co-nav-brand" href="#fh5co-header">NB</a>
-					<ul class="fh5co-nav-links">
-						<li><a href="#fh5co-about">About</a></li>
-						<li><a href="#fh5co-resume">Resume</a></li>
-						<li><a href="#fh5co-features">Services</a></li>
-						<li><a href="#fh5co-skills">Skills</a></li>
-						<li><a href="#fh5co-work">Work</a></li>
-						<li><a href="#fh5co-started" class="hire-btn">Hire Me</a></li>
-						<li class="fh5co-nav-extra">
-							<button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle light/dark theme" title="Toggle light/dark theme">
-								<span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">◐</span>
-								<span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
-							</button>
-						</li>
-					</ul>
-				</div>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<!-- ============ Navigation ============ -->
+	<header class="nav" aria-label="Primary">
+		<div class="container nav__inner">
+			<a class="nav__brand" href="#top" aria-label="Nilo Besingga — home">
+				<span class="nav__mark" aria-hidden="true">N</span>
+				<span>Nilo Besingga</span>
+			</a>
+			<nav>
+				<ul class="nav__links" id="nav-links">
+					<li><a href="#about">About</a></li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#work">Work</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="nav__actions">
+				<button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Toggle light or dark theme" title="Toggle theme">
+					<svg class="icon icon-moon"><use href="#i-moon"/></svg>
+					<svg class="icon icon-sun"><use href="#i-sun"/></svg>
+				</button>
+				<a href="#contact" class="btn btn--primary btn--sm nav__cta">Hire me</a>
+				<button type="button" class="icon-btn nav__menu-btn" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+					<svg class="icon"><use href="#i-menu"/></svg>
+				</button>
 			</div>
 		</div>
-	</nav>
+	</header>
 
-	<div class="fh5co-loader"></div>
+	<main id="main">
 
-	<div id="page">
-		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-			style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="tech-grid"></div>
-			<div class="scanline"></div>
+		<!-- ============ Hero ============ -->
+		<section class="hero" id="top">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<div class="display-t js-fullheight">
-							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-								<div class="profile-thumb" style="background: url(images/1615352107595.jpg);"></div>
-								<div class="terminal-tag">&gt; ./init_developer.sh<span class="cursor-blink">_</span></div>
-								<h1><span>Nilo Besingga</span></h1>
-								<h3><span class="role-tag">&lt;Application Developer /&gt;</span></h3>
-								<div class="hero-status">
-									<span class="status-badge"><span class="status-dot"></span> Available for hire &middot; Shipping production software with AI-assisted workflows</span>
-								</div>
-								<div class="tech-stack-strip">
-									<span class="tech-chip">Vue.js</span>
-									<span class="tech-chip">Laravel</span>
-									<span class="tech-chip">Flutter</span>
-									<span class="tech-chip">Claude AI</span>
-									<span class="tech-chip">Vibe Coding</span>
-								</div>
-								<div class="hero-stats">
-									<div class="stat"><strong data-count="8" data-suffix="+">0</strong>Years Shipping</div>
-									<div class="stat"><strong data-count="50" data-suffix="+">0</strong>Projects</div>
-									<div class="stat"><strong data-count="6">0</strong>Companies</div>
-									<div class="stat"><strong data-count="3">0</strong>Countries</div>
-								</div>
-								<ul class="fh5co-social-icons">
-									<li><a href="https://github.com/nilskie06" target="_blank" rel="noopener noreferrer"><i class="icon-github2"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer"><i class="icon-linkedin2"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-
-		<div id="fh5co-about" class="animate-box">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>About Me</h2>
-					</div>
-				</div>
-
-				<div class="row about-intro reveal">
-					<div class="col-md-7">
-						<div class="code-card" aria-label="Developer profile object">
-							<div class="code-card__chrome">
-								<span class="code-card__dot code-card__dot--r"></span>
-								<span class="code-card__dot code-card__dot--y"></span>
-								<span class="code-card__dot code-card__dot--g"></span>
-								<span class="code-card__title">~/portfolio/<span class="tab-active">developer.js</span></span>
-							</div>
-							<div class="code-card__body">
-								<div class="code-card__gutter">
-1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14
-								</div>
-								<div class="code-card__code"><pre><span class="tk-cmt">// developer profile · 2026</span>
-<span class="tk-key">const</span> <span class="tk-fn">developer</span> <span class="tk-punct">=</span> <span class="tk-punct">{</span>
-  <span class="tk-key">name</span><span class="tk-punct">:</span> <span class="tk-str">'Nilo Besingga'</span><span class="tk-punct">,</span>
-  <span class="tk-key">role</span><span class="tk-punct">:</span> <span class="tk-str">'Application Developer'</span><span class="tk-punct">,</span>
-  <span class="tk-key">stack</span><span class="tk-punct">:</span> <span class="tk-punct">[</span><span class="tk-str">'vue'</span><span class="tk-punct">,</span> <span class="tk-str">'laravel'</span><span class="tk-punct">,</span> <span class="tk-str">'flutter'</span><span class="tk-punct">,</span> <span class="tk-str">'mysql'</span><span class="tk-punct">,</span> <span class="tk-str">'claude-ai'</span><span class="tk-punct">],</span>
-  <span class="tk-key">yearsOfExperience</span><span class="tk-punct">:</span> <span class="tk-num">8</span><span class="tk-punct">,</span>
-  <span class="tk-key">focus</span><span class="tk-punct">:</span> <span class="tk-punct">[</span><span class="tk-str">'logistics systems'</span><span class="tk-punct">,</span> <span class="tk-str">'API design'</span><span class="tk-punct">,</span> <span class="tk-str">'AI automation'</span><span class="tk-punct">,</span> <span class="tk-str">'mobile apps'</span><span class="tk-punct">],</span>
-  <span class="tk-key">location</span><span class="tk-punct">:</span> <span class="tk-str">'Dolho Bato, Leyte · PH'</span><span class="tk-punct">,</span>
-  <span class="tk-key">remoteFriendly</span><span class="tk-punct">:</span> <span class="tk-bool">true</span><span class="tk-punct">,</span>
-  <span class="tk-key">availableForHire</span><span class="tk-punct">:</span> <span class="tk-bool">true</span><span class="tk-punct">,</span>
-  <span class="tk-fn">ship</span><span class="tk-punct">(</span>idea<span class="tk-punct">)</span> <span class="tk-punct">{</span>
-    <span class="tk-key">return</span> idea<span class="tk-punct">.</span><span class="tk-fn">refine</span><span class="tk-punct">().</span><span class="tk-fn">build</span><span class="tk-punct">().</span><span class="tk-fn">test</span><span class="tk-punct">().</span><span class="tk-fn">deploy</span><span class="tk-punct">();</span>
-  <span class="tk-punct">}</span>
-<span class="tk-punct">};</span>
-<span class="tk-cmt">// → ready to contribute to your next product<span class="code-caret"></span></span></pre></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-5">
-						<div class="about-panel">
-							<div class="about-panel__label">// profile</div>
-							<h3 class="about-panel__title">Engineer · Builder · Problem-solver</h3>
-							<p class="about-panel__lead">
-								Application Developer with <strong>8+ years</strong> shipping production web and
-								mobile applications across logistics, enterprise, and freelance projects.
-								I specialize in <strong>Vue.js</strong> and <strong>Laravel</strong> on the web,
-								<strong>Flutter</strong> on mobile, and clean REST API design to connect systems.
-							</p>
-							<p>
-								I work end-to-end — from requirements and architecture through implementation,
-								testing, and deployment — and pair daily with <strong>Claude AI</strong> to
-								accelerate delivery without sacrificing code quality.
-							</p>
-
-							<ul class="about-pillars">
-								<li><span class="about-pillars__k">✓</span> Owns features end-to-end, web and mobile</li>
-								<li><span class="about-pillars__k">✓</span> Bias for shipping with engineering discipline</li>
-								<li><span class="about-pillars__k">✓</span> Strong UX and API design instincts</li>
-								<li><span class="about-pillars__k">✓</span> Leaves the codebase healthier than found</li>
-							</ul>
-
-							<div class="about-panel__cta">
-								<a href="resume.pdf" class="btn btn-primary btn-sm" download><i class="icon-download"></i> Download Resume</a>
-								<a href="#fh5co-started" class="btn btn-ghost btn-sm">Get in touch &rarr;</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-12">
-						<div class="profile-config">
-							<header class="profile-config__chrome">
-								<span class="profile-config__dots"><i></i><i></i><i></i></span>
-								<span class="profile-config__path">~/profile.<span class="tab-active">config</span></span>
-								<span class="profile-config__status"><span class="profile-config__pulse"></span> available</span>
-							</header>
-							<div class="profile-config__body">
-								<div class="cfg-col">
-									<div class="cfg-row">
-										<span class="cfg-key">name</span>
-										<span class="cfg-op">=</span>
-										<span class="cfg-val cfg-val--str">"Nilo Besingga"</span>
-									</div>
-									<div class="cfg-row">
-										<span class="cfg-key">role</span>
-										<span class="cfg-op">=</span>
-										<span class="cfg-val cfg-val--str">"Application Developer"</span>
-									</div>
-									<div class="cfg-row">
-										<span class="cfg-key">email</span>
-										<span class="cfg-op">=</span>
-										<a class="cfg-val cfg-val--str cfg-link" href="mailto:nbesingga@gmail.com">"nbesingga@gmail.com"</a>
-										<button class="cfg-copy" type="button" data-copy="nbesingga@gmail.com" aria-label="copy email">copy</button>
-									</div>
-									<div class="cfg-row">
-										<span class="cfg-key">phone</span>
-										<span class="cfg-op">=</span>
-										<a class="cfg-val cfg-val--str cfg-link" href="tel:+639353330652">"+63 935 333 0652"</a>
-									</div>
-								</div>
-								<div class="cfg-col">
-									<div class="cfg-row">
-										<span class="cfg-key">location</span>
-										<span class="cfg-op">=</span>
-										<span class="cfg-val cfg-val--str">"Dolho Bato, Leyte · Philippines"</span>
-									</div>
-									<div class="cfg-row">
-										<span class="cfg-key">timezone</span>
-										<span class="cfg-op">=</span>
-										<span class="cfg-val cfg-val--str">"GMT+8 · PHT"</span>
-									</div>
-									<div class="cfg-row">
-										<span class="cfg-key">availability</span>
-										<span class="cfg-op">=</span>
-										<span class="cfg-val cfg-val--str">"remote · hybrid · onsite"</span>
-									</div>
-									<div class="cfg-row">
-										<span class="cfg-key">languages</span>
-										<span class="cfg-op">=</span>
-										<span class="cfg-val cfg-val--arr">[<span class="cfg-val--str">"English"</span>, <span class="cfg-val--str">"Filipino"</span>]</span>
-									</div>
-									<div class="cfg-row">
-										<span class="cfg-key">socials</span>
-										<span class="cfg-op">=</span>
-										<span class="cfg-socials">
-											<a href="https://github.com/nilskie06" target="_blank" rel="noopener noreferrer" data-tip="GitHub" aria-label="GitHub"><i class="icon-github2"></i></a>
-											<a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer" data-tip="LinkedIn" aria-label="LinkedIn"><i class="icon-linkedin2"></i></a>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row about-extras">
-					<div class="col-md-6">
-						<section class="px-card">
-							<header class="px-card__chrome">
-								<span class="px-card__dots"><i></i><i></i><i></i></span>
-								<span class="px-card__path">~/.<span class="tab-active">now.json</span></span>
-								<span class="px-card__badge">LIVE</span>
-							</header>
-							<div class="px-card__body">
-								<pre class="px-code"><span class="tk-punct">{</span>
-  <span class="tk-key">"currentlyShipping"</span><span class="tk-punct">:</span>  <span class="tk-str">"Enterprise logistics platform · Laravel + Vue.js"</span><span class="tk-punct">,</span>
-  <span class="tk-key">"currentlyReading"</span><span class="tk-punct">:</span>   <span class="tk-str">"Clean Architecture"</span><span class="tk-punct">,</span>
-  <span class="tk-key">"currentlyLearning"</span><span class="tk-punct">:</span>  <span class="tk-str">"Flutter advanced patterns · n8n agents"</span><span class="tk-punct">,</span>
-  <span class="tk-key">"currentSideQuest"</span><span class="tk-punct">:</span>   <span class="tk-str">"refining this portfolio"</span><span class="tk-punct">,</span>
-  <span class="tk-key">"openTo"</span><span class="tk-punct">:</span>             <span class="tk-punct">[</span><span class="tk-str">"full-time"</span><span class="tk-punct">,</span> <span class="tk-str">"contract"</span><span class="tk-punct">,</span> <span class="tk-str">"freelance"</span><span class="tk-punct">],</span>
-  <span class="tk-key">"vibeCheck"</span><span class="tk-punct">:</span>          <span class="tk-str">"focused · building · shipping"</span><span class="tk-punct">,</span>
-  <span class="tk-key">"lastUpdated"</span><span class="tk-punct">:</span>        <span class="tk-str">"2026-05-14"</span>
-<span class="tk-punct">}</span></pre>
-							</div>
-						</section>
-					</div>
-
-					<div class="col-md-6">
-						<section class="px-card">
-							<header class="px-card__chrome">
-								<span class="px-card__dots"><i></i><i></i><i></i></span>
-								<span class="px-card__path">~/docs/<span class="tab-active">principles.md</span></span>
-								<span class="px-card__badge px-card__badge--brand"># engineering</span>
-							</header>
-							<div class="px-card__body">
-								<ul class="px-principles">
-									<li><span class="px-principles__num">01</span><span>Ship the smallest useful version, then iterate.</span></li>
-									<li><span class="px-principles__num">02</span><span>Readable code beats clever code &mdash; future-you is grateful.</span></li>
-									<li><span class="px-principles__num">03</span><span>Test the hard parts. Mock the boundaries, not the logic.</span></li>
-									<li><span class="px-principles__num">04</span><span>Leave the codebase healthier than you found it.</span></li>
-									<li><span class="px-principles__num">05</span><span>Strong opinions, weakly held &mdash; listen, then choose.</span></li>
-									<li><span class="px-principles__num">06</span><span>Logs and types pay rent every single day.</span></li>
-								</ul>
-							</div>
-						</section>
-					</div>
-				</div>
-
-				<div class="row about-extras">
-					<div class="col-md-12">
-						<section class="px-card">
-							<header class="px-card__chrome">
-								<span class="px-card__dots"><i></i><i></i><i></i></span>
-								<span class="px-card__path">~/hire/<span class="tab-active">faq.md</span></span>
-								<span class="px-card__badge">recruiter Q&amp;A</span>
-							</header>
-							<div class="px-card__body">
-								<ul class="px-faq">
-									<li>
-										<details>
-											<summary><span class="px-faq__q">Q. Notice period &amp; earliest start?</span></summary>
-											<p class="px-faq__a">30-day notice from current role. Available for a serious offer within ~30&ndash;45 days of signing.</p>
-										</details>
-									</li>
-									<li>
-										<details>
-											<summary><span class="px-faq__q">Q. Salary range / day rate?</span></summary>
-											<p class="px-faq__a">Negotiable based on scope and engagement type. Happy to share specifics on a call once the role is clear.</p>
-										</details>
-									</li>
-									<li>
-										<details>
-											<summary><span class="px-faq__q">Q. Remote, hybrid, or onsite?</span></summary>
-											<p class="px-faq__a">All three open. Strong async-collaboration habits; based in Leyte (GMT+8) with good overlap to APAC, EU mornings, and US evenings.</p>
-										</details>
-									</li>
-									<li>
-										<details>
-											<summary><span class="px-faq__q">Q. Contract or full-time?</span></summary>
-											<p class="px-faq__a">Either &mdash; tell me what you need. Currently full-time at AAI; open to contract on the side or a full move for the right role.</p>
-										</details>
-									</li>
-									<li>
-										<details>
-											<summary><span class="px-faq__q">Q. Visa / work eligibility?</span></summary>
-											<p class="px-faq__a">Philippine citizen. Work-from-PH or contract globally without sponsorship. Sponsorship needed for onsite outside PH.</p>
-										</details>
-									</li>
-								</ul>
-							</div>
-						</section>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="fh5co-resume" class="fh5co-bg-color">
-			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>My Resume</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1">
-						<div class="exp-group">
-							<div class="exp-group__label">// experience.log <span class="exp-group__count">6 entries</span></div>
-							<ol class="exp-list" role="list">
-								<li class="exp-item animate-box" data-year="Mar 2026 — Now">
-									<span class="exp-item__dot" aria-hidden="true"></span>
-									<article class="exp-card">
-										<header class="exp-card__chrome">
-											<span class="exp-card__dots"><i></i><i></i><i></i></span>
-											<span class="exp-card__path">~/career/<span class="tab-active">aai-software-engineer</span></span>
-											<span class="exp-card__period">Mar 2026 — Current</span>
-										</header>
-										<div class="exp-card__body">
-											<h3 class="exp-card__role">Software Engineer</h3>
-											<div class="exp-card__company"><span class="exp-card__co">AAI Worldwide Logistics</span> &middot; <span class="exp-card__loc">Philippines</span></div>
-											<p class="exp-card__summary">
-												Leading software development initiatives at AAI Worldwide Logistics,
-												building and maintaining enterprise-grade web applications that support
-												logistics and supply chain operations.
-											</p>
-											<ul class="exp-card__bullets">
-												<li>Designing and shipping full-stack features for the company's
-													<strong>logistics platform</strong> using Laravel, Vue.js, and Flutter
-													— from requirements through production deployment.</li>
-												<li>Adopted <strong>Vibe Coding</strong> — AI-assisted delivery with
-													<strong>Claude AI</strong> — to compress prototyping and refactoring
-													cycles while keeping code review and engineering judgment in the loop.</li>
-												<li>Collaborating across teams to design and implement robust APIs,
-													streamline data workflows, and deliver user-friendly interfaces for
-													complex operational systems.</li>
-												<li>Contributing to internal tooling, automation, and system integrations
-													that improve operational efficiency across the organization.</li>
-											</ul>
-											<div class="exp-card__stack">
-												<span class="exp-chip">Laravel</span>
-												<span class="exp-chip">Vue.js</span>
-												<span class="exp-chip">Flutter</span>
-												<span class="exp-chip">Dart</span>
-												<span class="exp-chip">MySQL</span>
-												<span class="exp-chip">Docker</span>
-												<span class="exp-chip exp-chip--ai">Claude AI</span>
-												<span class="exp-chip exp-chip--ai">Vibe Coding</span>
-											</div>
-										</div>
-									</article>
-								</li>
-
-								<li class="exp-item animate-box" data-year="2023 — Jan 2026">
-									<span class="exp-item__dot" aria-hidden="true"></span>
-									<article class="exp-card">
-										<header class="exp-card__chrome">
-											<span class="exp-card__dots"><i></i><i></i><i></i></span>
-											<span class="exp-card__path">~/career/<span class="tab-active">tersusnet-freelance</span></span>
-											<span class="exp-card__period">2023 — Jan 2026</span>
-										</header>
-										<div class="exp-card__body">
-											<h3 class="exp-card__role">Freelance Web Developer</h3>
-											<div class="exp-card__company"><span class="exp-card__co">TersusNet</span> &middot; <span class="exp-card__loc">Remote</span></div>
-											<p class="exp-card__summary">
-												Developed, tested, and maintained responsive and user-friendly websites
-												for clients across different industries, delivering full-stack solutions
-												from design to deployment.
-											</p>
-											<ul class="exp-card__bullets">
-												<li>Built clean, efficient code using HTML, CSS, JavaScript, and modern
-													frameworks including <strong>Vue.js</strong> — and integrated APIs and
-													databases using <strong>PHP, Laravel, and Node.js</strong>.</li>
-												<li>Optimized web applications for speed, scalability, and security,
-													collaborating with designers to implement polished UI/UX improvements
-													across all deliverables.</li>
-												<li>Managed multiple concurrent client projects, ensuring consistent
-													on-time delivery and clear communication throughout the engagement.</li>
-											</ul>
-											<div class="exp-card__stack">
-												<span class="exp-chip">Laravel</span>
-												<span class="exp-chip">Vue.js</span>
-												<span class="exp-chip">Node.js</span>
-												<span class="exp-chip">REST API</span>
-												<span class="exp-chip">PHP</span>
-												<span class="exp-chip">HTML/CSS</span>
-											</div>
-										</div>
-									</article>
-								</li>
-
-								<li class="exp-item animate-box" data-year="Nov 2024 — Oct 2025">
-									<span class="exp-item__dot" aria-hidden="true"></span>
-									<article class="exp-card">
-										<header class="exp-card__chrome">
-											<span class="exp-card__dots"><i></i><i></i><i></i></span>
-											<span class="exp-card__path">~/career/<span class="tab-active">cresco-dubai</span></span>
-											<span class="exp-card__period">Nov 2024 — Oct 2025</span>
-										</header>
-										<div class="exp-card__body">
-											<h3 class="exp-card__role">Software Engineer</h3>
-											<div class="exp-card__company"><span class="exp-card__co">CRESCO Software Technology</span> &middot; <span class="exp-card__loc">Dubai, UAE &middot; Onsite</span></div>
-											<p class="exp-card__summary">
-												Worked onsite in Dubai delivering enterprise software solutions for
-												CRESCO Software Technology (Crescotec L.L.C - FZ) in a fast-paced
-												international environment.
-											</p>
-											<ul class="exp-card__bullets">
-												<li>Built and maintained scalable enterprise applications, contributing
-													to cross-functional teams across the full software delivery lifecycle.</li>
-												<li>Designed and implemented backend APIs and frontend interfaces for
-													<strong>ERP modules</strong> used by business-critical operations.</li>
-												<li>Stayed current with industry best practices and emerging technologies
-													to deliver high-quality, maintainable software products.</li>
-											</ul>
-											<div class="exp-card__stack">
-												<span class="exp-chip">Laravel</span>
-												<span class="exp-chip">Vue.js</span>
-												<span class="exp-chip">PostgreSQL</span>
-												<span class="exp-chip">REST API</span>
-												<span class="exp-chip">ERP</span>
-											</div>
-										</div>
-									</article>
-								</li>
-
-								<li class="exp-item animate-box" data-year="Jun 2021 — Nov 2024">
-									<span class="exp-item__dot" aria-hidden="true"></span>
-									<article class="exp-card">
-										<header class="exp-card__chrome">
-											<span class="exp-card__dots"><i></i><i></i><i></i></span>
-											<span class="exp-card__path">~/career/<span class="tab-active">aai-app-developer</span></span>
-											<span class="exp-card__period">Jun 2021 — Nov 2024</span>
-										</header>
-										<div class="exp-card__body">
-											<h3 class="exp-card__role">Application Developer</h3>
-											<div class="exp-card__company"><span class="exp-card__co">AAI Worldwide Logistics</span> &middot; <span class="exp-card__loc">Philippines</span></div>
-											<p class="exp-card__summary">
-												Developed and maintained web applications supporting logistics,
-												warehousing, and supply chain operations across the organization
-												over three years of continuous delivery.
-											</p>
-											<ul class="exp-card__bullets">
-												<li>Built and integrated APIs to connect internal systems and external
-													services, ensuring seamless data flow across platforms.</li>
-												<li>Developed key features for the <strong>FMS</strong>, <strong>CRM</strong>,
-													and <strong>TMS</strong> — from data reporting tools to operational
-													dashboards using <strong>Vue.js</strong> and <strong>Laravel</strong>.</li>
-												<li>Worked closely with operations and management teams to translate
-													business requirements into reliable, scalable software solutions.</li>
-											</ul>
-											<div class="exp-card__stack">
-												<span class="exp-chip">Laravel</span>
-												<span class="exp-chip">Vue.js</span>
-												<span class="exp-chip">MySQL</span>
-												<span class="exp-chip">REST API</span>
-												<span class="exp-chip">Linux</span>
-												<span class="exp-chip">Docker</span>
-											</div>
-										</div>
-									</article>
-								</li>
-
-								<li class="exp-item animate-box" data-year="Mar 2018 — Aug 2020">
-									<span class="exp-item__dot" aria-hidden="true"></span>
-									<article class="exp-card">
-										<header class="exp-card__chrome">
-											<span class="exp-card__dots"><i></i><i></i><i></i></span>
-											<span class="exp-card__path">~/career/<span class="tab-active">black-arrow-express</span></span>
-											<span class="exp-card__period">Mar 2018 — Aug 2020</span>
-										</header>
-										<div class="exp-card__body">
-											<h3 class="exp-card__role">Application Developer</h3>
-											<div class="exp-card__company"><span class="exp-card__co">Black Arrow Express</span> &middot; <span class="exp-card__loc">Philippines</span></div>
-											<p class="exp-card__summary">
-												Developed and maintained internal applications supporting the day-to-day
-												operations of a fast-growing courier and logistics company.
-											</p>
-											<ul class="exp-card__bullets">
-												<li>Worked on both frontend interfaces and backend logic — from operational
-													forms to <strong>data reporting tools</strong> used by operations teams.</li>
-												<li>Built features that streamlined package tracking, billing workflows,
-													and internal operational data management.</li>
-												<li>Gained solid hands-on experience delivering fast, reliable features
-													under real business pressure in a high-volume environment.</li>
-											</ul>
-											<div class="exp-card__stack">
-												<span class="exp-chip">PHP</span>
-												<span class="exp-chip">Laravel</span>
-												<span class="exp-chip">MySQL</span>
-												<span class="exp-chip">jQuery</span>
-												<span class="exp-chip">Bootstrap</span>
-											</div>
-										</div>
-									</article>
-								</li>
-
-								<li class="exp-item animate-box" data-year="Apr 2017 — Mar 2018">
-									<span class="exp-item__dot" aria-hidden="true"></span>
-									<article class="exp-card">
-										<header class="exp-card__chrome">
-											<span class="exp-card__dots"><i></i><i></i><i></i></span>
-											<span class="exp-card__path">~/career/<span class="tab-active">klg-international</span></span>
-											<span class="exp-card__period">Apr 2017 — Mar 2018</span>
-										</header>
-										<div class="exp-card__body">
-											<h3 class="exp-card__role">IT Support Specialist</h3>
-											<div class="exp-card__company"><span class="exp-card__co">KLG International, Inc.</span> &middot; <span class="exp-card__loc">Parañaque City, Philippines</span></div>
-											<p class="exp-card__summary">
-												Provided technical support to internal teams — maintaining systems,
-												troubleshooting hardware and software issues, and keeping operations
-												running smoothly.
-											</p>
-											<ul class="exp-card__bullets">
-												<li>Supported network infrastructure and resolved user issues promptly
-													to minimize downtime across the organization.</li>
-												<li>Managed server maintenance, helpdesk ticketing, and hardware
-													troubleshooting for a multi-department office environment.</li>
-												<li>Built a strong technical foundation in Linux, networking, and PHP
-													that set the stage for a career in full-stack development.</li>
-											</ul>
-											<div class="exp-card__stack">
-												<span class="exp-chip">Linux</span>
-												<span class="exp-chip">Windows Server</span>
-												<span class="exp-chip">Networking</span>
-												<span class="exp-chip">PHP</span>
-												<span class="exp-chip">MySQL</span>
-											</div>
-										</div>
-									</article>
-								</li>
-							</ol>
-						</div>
-
-						<div class="exp-group">
-							<div class="exp-group__label">// education.log <span class="exp-group__count">1 entry</span></div>
-							<ol class="exp-list" role="list">
-								<li class="exp-item animate-box" data-year="2013 — 2017">
-									<span class="exp-item__dot exp-item__dot--edu" aria-hidden="true"></span>
-									<article class="exp-card exp-card--edu">
-										<header class="exp-card__chrome">
-											<span class="exp-card__dots"><i></i><i></i><i></i></span>
-											<span class="exp-card__path">~/education/<span class="tab-active">slsu-computer-programming</span></span>
-											<span class="exp-card__period">2013 — 2017</span>
-										</header>
-										<div class="exp-card__body">
-											<h3 class="exp-card__role">Bachelor's Degree <span class="exp-card__sub">Computer Programming / Programmer, General</span></h3>
-											<div class="exp-card__company"><span class="exp-card__co">Southern Leyte State University</span> &middot; <span class="exp-card__loc">Philippines</span></div>
-											<p class="exp-card__summary">
-												Four years building a solid foundation in programming, databases, and
-												software development — the kind that holds up years later in production.
-											</p>
-											<ul class="exp-card__bullets">
-												<li>Completed a capstone project applying the full development lifecycle
-													&mdash; requirements, design, implementation, and presentation.</li>
-												<li>Collaborated on team projects, sharpened problem-solving skills, and
-													graduated ready to build real things for real people.</li>
-											</ul>
-											<div class="exp-card__stack">
-												<span class="exp-chip">C / C++</span>
-												<span class="exp-chip">Java</span>
-												<span class="exp-chip">PHP</span>
-												<span class="exp-chip">MySQL</span>
-												<span class="exp-chip">Networking</span>
-											</div>
-										</div>
-									</article>
-								</li>
-							</ol>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div id="fh5co-features" class="animate-box">
-			<div class="container">
-				<div class="services-padding">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<h2>Services</h2>
-						</div>
-					</div>
-					<div class="row animate-box">
-						<div class="col-md-10 col-md-offset-1 text-center">
-							<p class="services-intro">
-								What I deliver for teams &amp; clients — end-to-end engineering across the modern
-								web and mobile stack, with AI-assisted workflows where they create real leverage.
-							</p>
-						</div>
-					</div>
-
-					<div class="row services-grid">
-						<div class="col-md-4 col-sm-6">
-							<article class="svc-card">
-								<header class="svc-card__head">
-									<span class="svc-card__num">01</span>
-									<div class="svc-card__heading">
-										<div class="svc-card__cmd">$ build &mdash;web</div>
-										<h3 class="svc-card__title">Full-Stack Web Development</h3>
-									</div>
-								</header>
-								<p class="svc-card__lead">Production web applications, end-to-end — from schema to deploy.</p>
-								<ul class="svc-card__deliverables">
-									<li>Vue.js single-page apps &amp; component libraries</li>
-									<li>Laravel back-ends with clean domain models</li>
-									<li>Database design, migrations, and query tuning</li>
-									<li>Authentication, authorization, and audit logging</li>
-								</ul>
-								<div class="svc-card__stack">
-									<span class="exp-chip">Vue.js</span>
-									<span class="exp-chip">Laravel</span>
-									<span class="exp-chip">MySQL</span>
-									<span class="exp-chip">REST</span>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6">
-							<article class="svc-card">
-								<header class="svc-card__head">
-									<span class="svc-card__num">02</span>
-									<div class="svc-card__heading">
-										<div class="svc-card__cmd">$ flutter &mdash;ship</div>
-										<h3 class="svc-card__title">Mobile App Development <span class="svc-card__badge">Flutter</span></h3>
-									</div>
-								</header>
-								<p class="svc-card__lead">Single-codebase mobile apps that feel native on iOS and Android.</p>
-								<ul class="svc-card__deliverables">
-									<li>Flutter / Dart cross-platform builds</li>
-									<li>Offline-first sync &amp; local storage strategies</li>
-									<li>REST backend integration &amp; push notifications</li>
-									<li>Play Store &amp; App Store release pipelines</li>
-								</ul>
-								<div class="svc-card__stack">
-									<span class="exp-chip">Flutter</span>
-									<span class="exp-chip">Dart</span>
-									<span class="exp-chip">Firebase</span>
-									<span class="exp-chip">CI/CD</span>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6">
-							<article class="svc-card svc-card--ai">
-								<header class="svc-card__head">
-									<span class="svc-card__num">03</span>
-									<div class="svc-card__heading">
-										<div class="svc-card__cmd">$ claude &mdash;pair</div>
-										<h3 class="svc-card__title">AI-Assisted Delivery <span class="svc-card__badge svc-card__badge--ai">Claude</span></h3>
-									</div>
-								</header>
-								<p class="svc-card__lead">Compress delivery timelines without compromising on quality.</p>
-								<ul class="svc-card__deliverables">
-									<li>Pair-programming with Claude &amp; agentic tools</li>
-									<li>Rapid prototyping from a spec or rough idea</li>
-									<li>Large-scale refactors with safety nets</li>
-									<li>AI-augmented code review &amp; documentation</li>
-								</ul>
-								<div class="svc-card__stack">
-									<span class="exp-chip exp-chip--ai">Claude AI</span>
-									<span class="exp-chip">Cursor</span>
-									<span class="exp-chip">Vibe Coding</span>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6">
-							<article class="svc-card">
-								<header class="svc-card__head">
-									<span class="svc-card__num">04</span>
-									<div class="svc-card__heading">
-										<div class="svc-card__cmd">$ api &mdash;design</div>
-										<h3 class="svc-card__title">API Design &amp; Integration</h3>
-									</div>
-								</header>
-								<p class="svc-card__lead">Reliable contracts that let teams and systems move independently.</p>
-								<ul class="svc-card__deliverables">
-									<li>RESTful API design &amp; documentation</li>
-									<li>Token-based auth (JWT, OAuth flows)</li>
-									<li>Third-party integrations &amp; webhooks</li>
-									<li>Versioning, rate-limiting, and error contracts</li>
-								</ul>
-								<div class="svc-card__stack">
-									<span class="exp-chip">REST</span>
-									<span class="exp-chip">JSON</span>
-									<span class="exp-chip">OAuth</span>
-									<span class="exp-chip">Postman</span>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6">
-							<article class="svc-card">
-								<header class="svc-card__head">
-									<span class="svc-card__num">05</span>
-									<div class="svc-card__heading">
-										<div class="svc-card__cmd">$ ops &mdash;deploy</div>
-										<h3 class="svc-card__title">DevOps &amp; Cloud</h3>
-									</div>
-								</header>
-								<p class="svc-card__lead">Docker, Linux servers, and CI/CD pipelines that keep apps running 24/7.</p>
-								<ul class="svc-card__deliverables">
-									<li>Docker containerization &amp; Compose stacks</li>
-									<li>Linux server setup, hardening, and monitoring</li>
-									<li>Nginx / Apache reverse proxy configuration</li>
-									<li>CI/CD pipelines with automated testing &amp; deploy</li>
-								</ul>
-								<div class="svc-card__stack">
-									<span class="exp-chip">Docker</span>
-									<span class="exp-chip">Linux</span>
-									<span class="exp-chip">Nginx</span>
-									<span class="exp-chip">CI/CD</span>
-								</div>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6">
-							<article class="svc-card">
-								<header class="svc-card__head">
-									<span class="svc-card__num">06</span>
-									<div class="svc-card__heading">
-										<div class="svc-card__cmd">$ ops &mdash;maintain</div>
-										<h3 class="svc-card__title">Maintenance &amp; Support</h3>
-									</div>
-								</header>
-								<p class="svc-card__lead">Post-launch engineering that keeps products healthy and fast.</p>
-								<ul class="svc-card__deliverables">
-									<li>Bug triage &amp; targeted fixes</li>
-									<li>Security patches &amp; dependency upgrades</li>
-									<li>Performance audits &amp; optimization</li>
-									<li>Incremental feature work &amp; backlog grooming</li>
-								</ul>
-								<div class="svc-card__stack">
-									<span class="exp-chip">Git</span>
-									<span class="exp-chip">Docker</span>
-									<span class="exp-chip">Linux</span>
-									<span class="exp-chip">Monitoring</span>
-								</div>
-							</article>
-						</div>
-					</div>
-
-					<div class="row services-cta animate-box">
-						<div class="col-md-12 text-center">
-							<p class="services-foot">
-								<span class="services-foot__prompt">&gt;</span>
-								<span class="services-foot__txt">Need something not on the list? Let&rsquo;s talk &mdash; happy to scope it together.</span>
-								<a href="#fh5co-started" class="btn btn-ghost btn-sm">Start a conversation &rarr;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="fh5co-skills" class="animate-box">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Skills</h2>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-10 col-md-offset-1 text-center">
-						<p class="skills-intro">A pragmatic snapshot of where I spend most of my time. Levels indicate
-							hands-on production experience, not just familiarity.</p>
-					</div>
-				</div>
-
-				<div class="row skill-grid">
-					<div class="col-md-6 col-sm-6">
-						<section class="skill-card">
-							<header class="skill-card__head">
-								<span class="skill-card__icon">[ FE ]</span>
-								<h3 class="skill-card__title">Frontend</h3>
-								<span class="skill-card__count">5</span>
-							</header>
-							<ul class="skill-card__list">
-								<li><span class="skill-name">Vue.js</span><span class="skill-bar"><i data-lvl="90"></i></span><span class="skill-val" data-target="90">0</span></li>
-								<li><span class="skill-name">HTML5 / CSS3</span><span class="skill-bar"><i data-lvl="90"></i></span><span class="skill-val" data-target="90">0</span></li>
-								<li><span class="skill-name">JavaScript</span><span class="skill-bar"><i data-lvl="88"></i></span><span class="skill-val" data-target="88">0</span></li>
-								<li><span class="skill-name">Bootstrap</span><span class="skill-bar"><i data-lvl="85"></i></span><span class="skill-val" data-target="85">0</span></li>
-								<li><span class="skill-name">Figma / UI</span><span class="skill-bar"><i data-lvl="78"></i></span><span class="skill-val" data-target="78">0</span></li>
-							</ul>
-						</section>
-					</div>
-
-					<div class="col-md-6 col-sm-6">
-						<section class="skill-card">
-							<header class="skill-card__head">
-								<span class="skill-card__icon">[ BE ]</span>
-								<h3 class="skill-card__title">Backend</h3>
-								<span class="skill-card__count">5</span>
-							</header>
-							<ul class="skill-card__list">
-								<li><span class="skill-name">Laravel</span><span class="skill-bar"><i data-lvl="88"></i></span><span class="skill-val" data-target="88">0</span></li>
-								<li><span class="skill-name">PHP</span><span class="skill-bar"><i data-lvl="88"></i></span><span class="skill-val" data-target="88">0</span></li>
-								<li><span class="skill-name">MySQL / SQL</span><span class="skill-bar"><i data-lvl="85"></i></span><span class="skill-val" data-target="85">0</span></li>
-								<li><span class="skill-name">REST &amp; API Integration</span><span class="skill-bar"><i data-lvl="88"></i></span><span class="skill-val" data-target="88">0</span></li>
-								<li><span class="skill-name">Node.js</span><span class="skill-bar"><i data-lvl="75"></i></span><span class="skill-val" data-target="75">0</span></li>
-							</ul>
-						</section>
-					</div>
-
-					<div class="col-md-6 col-sm-6">
-						<section class="skill-card">
-							<header class="skill-card__head">
-								<span class="skill-card__icon">[ MB ]</span>
-								<h3 class="skill-card__title">Mobile</h3>
-								<span class="skill-card__count">2</span>
-							</header>
-							<ul class="skill-card__list">
-								<li><span class="skill-name">Flutter</span><span class="skill-bar"><i data-lvl="75" data-color="brand"></i></span><span class="skill-val" data-target="75">0</span></li>
-								<li><span class="skill-name">Dart</span><span class="skill-bar"><i data-lvl="72" data-color="brand"></i></span><span class="skill-val" data-target="72">0</span></li>
-							</ul>
-						</section>
-					</div>
-
-					<div class="col-md-6 col-sm-6">
-						<section class="skill-card">
-							<header class="skill-card__head">
-								<span class="skill-card__icon">[ AI ]</span>
-								<h3 class="skill-card__title">AI &amp; Tools</h3>
-								<span class="skill-card__count">5</span>
-							</header>
-							<ul class="skill-card__list">
-								<li><span class="skill-name">Claude AI</span><span class="skill-bar"><i data-lvl="92" data-color="ai"></i></span><span class="skill-val" data-target="92">0</span></li>
-								<li><span class="skill-name">AI-Assisted Delivery</span><span class="skill-bar"><i data-lvl="88" data-color="ai"></i></span><span class="skill-val" data-target="88">0</span></li>
-								<li><span class="skill-name">Git / GitHub</span><span class="skill-bar"><i data-lvl="90"></i></span><span class="skill-val" data-target="90">0</span></li>
-								<li><span class="skill-name">Docker</span><span class="skill-bar"><i data-lvl="72"></i></span><span class="skill-val" data-target="72">0</span></li>
-								<li><span class="skill-name">Linux / DevOps</span><span class="skill-bar"><i data-lvl="75"></i></span><span class="skill-val" data-target="75">0</span></li>
-							</ul>
-						</section>
-					</div>
-				</div>
-
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading fh5co-heading-sm" style="margin-top: 2em;" data-section="stack.yaml">
-						<h2>Tools &amp; Stack</h2>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-12">
-						<div class="stack-grid">
-							<div class="stack-group">
-								<div class="stack-group__label"># ai &middot; assistants</div>
-								<div class="stack-group__items">
-									<span class="tool-badge tool-ai">Claude AI</span>
-									<span class="tool-badge tool-ai">Claude Code</span>
-									<span class="tool-badge tool-ai">GitHub Copilot</span>
-									<span class="tool-badge tool-ai">AI-Assisted Dev</span>
-									<span class="tool-badge tool-ai">Vibe Coding</span>
-								</div>
-							</div>
-							<div class="stack-group">
-								<div class="stack-group__label"># mobile</div>
-								<div class="stack-group__items">
-									<span class="tool-badge tool-mobile">Flutter</span>
-									<span class="tool-badge tool-mobile">Dart</span>
-									<span class="tool-badge tool-mobile">Android Studio</span>
-									<span class="tool-badge tool-mobile">Firebase</span>
-								</div>
-							</div>
-							<div class="stack-group">
-								<div class="stack-group__label"># dev &middot; tooling</div>
-								<div class="stack-group__items">
-									<span class="tool-badge">VS Code</span>
-									<span class="tool-badge">Cursor</span>
-									<span class="tool-badge">Git</span>
-									<span class="tool-badge">GitHub</span>
-									<span class="tool-badge">Docker</span>
-									<span class="tool-badge">npm / Vite</span>
-									<span class="tool-badge">Composer</span>
-									<span class="tool-badge">Linux</span>
-								</div>
-							</div>
-							<div class="stack-group">
-								<div class="stack-group__label"># design &middot; api</div>
-								<div class="stack-group__items">
-									<span class="tool-badge">Figma</span>
-									<span class="tool-badge">Postman</span>
-									<span class="tool-badge">REST APIs</span>
-									<span class="tool-badge">Swagger</span>
-								</div>
-							</div>
-							<div class="stack-group">
-								<div class="stack-group__label"># infra &middot; cloud</div>
-								<div class="stack-group__items">
-									<span class="tool-badge">Nginx</span>
-									<span class="tool-badge">Ubuntu / Debian</span>
-									<span class="tool-badge">MySQL</span>
-									<span class="tool-badge">Redis</span>
-									<span class="tool-badge">SFTP / SSH</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="fh5co-work" class="fh5co-bg-dark">
-			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Work</h2>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-10 col-md-offset-1 text-center">
-						<p class="work-intro">Production builds and internal platforms across logistics, enterprise, courier, and IT — shipped across 3 countries.</p>
-					</div>
-				</div>
-				<div class="row work-grid" id="work-grid">
-					<div class="col-md-4 col-sm-6 col-padding animate-box">
-						<article class="proj-card">
-							<a href="https://github.com/nilskie06" class="proj-card__link" target="_blank" rel="noopener noreferrer">
-								<div class="proj-card__thumb" style="background-image: url(images/work-logistics.svg);">
-									<span class="proj-card__status proj-card__status--live">LIVE</span>
-								</div>
-								<div class="proj-card__body">
-									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">logistics-platform</span></div>
-									<h3 class="proj-card__title">Logistics Web Platform</h3>
-									<p class="proj-card__meta">AAI Worldwide Logistics &middot; Philippines</p>
-									<div class="proj-card__stack">
-										<span class="exp-chip">Laravel</span>
-										<span class="exp-chip">Vue.js</span>
-										<span class="exp-chip">MySQL</span>
-									</div>
-									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
-								</div>
-							</a>
-						</article>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-padding animate-box">
-						<article class="proj-card">
-							<a href="https://github.com/nilskie06" class="proj-card__link" target="_blank" rel="noopener noreferrer">
-								<div class="proj-card__thumb" style="background-image: url(images/work-enterprise.svg);">
-									<span class="proj-card__status proj-card__status--live">LIVE</span>
-								</div>
-								<div class="proj-card__body">
-									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">enterprise-erp</span></div>
-									<h3 class="proj-card__title">Enterprise ERP System</h3>
-									<p class="proj-card__meta">CRESCO Software Technology &middot; Dubai, UAE</p>
-									<div class="proj-card__stack">
-										<span class="exp-chip">Laravel</span>
-										<span class="exp-chip">Vue.js</span>
-										<span class="exp-chip">PostgreSQL</span>
-									</div>
-									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
-								</div>
-							</a>
-						</article>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-padding animate-box">
-						<article class="proj-card">
-							<a href="https://github.com/nilskie06" class="proj-card__link" target="_blank" rel="noopener noreferrer">
-								<div class="proj-card__thumb" style="background-image: url(images/work-freelance.svg);">
-									<span class="proj-card__status proj-card__status--archive">FREELANCE</span>
-								</div>
-								<div class="proj-card__body">
-									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">freelance-web</span></div>
-									<h3 class="proj-card__title">Full-Stack Web Projects</h3>
-									<p class="proj-card__meta">TersusNet &middot; Remote</p>
-									<div class="proj-card__stack">
-										<span class="exp-chip">Laravel</span>
-										<span class="exp-chip">Vue.js</span>
-										<span class="exp-chip">Node.js</span>
-									</div>
-									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
-								</div>
-							</a>
-						</article>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-padding animate-box">
-						<article class="proj-card">
-							<a href="https://github.com/nilskie06" class="proj-card__link" target="_blank" rel="noopener noreferrer">
-								<div class="proj-card__thumb" style="background-image: url(images/work-appdev.svg);">
-									<span class="proj-card__status proj-card__status--live">LIVE</span>
-								</div>
-								<div class="proj-card__body">
-									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">aai-app-platform</span></div>
-									<h3 class="proj-card__title">App Dev Platform</h3>
-									<p class="proj-card__meta">AAI Worldwide Logistics &middot; Philippines</p>
-									<div class="proj-card__stack">
-										<span class="exp-chip">Laravel</span>
-										<span class="exp-chip">Vue.js</span>
-										<span class="exp-chip">Docker</span>
-									</div>
-									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
-								</div>
-							</a>
-						</article>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-padding animate-box">
-						<article class="proj-card">
-							<a href="https://github.com/nilskie06/rider_admin" class="proj-card__link" target="_blank" rel="noopener noreferrer">
-								<div class="proj-card__thumb" style="background-image: url(images/work-courier.svg);">
-									<span class="proj-card__status proj-card__status--archive">ARCHIVE</span>
-								</div>
-								<div class="proj-card__body">
-									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">courier-ops-app</span></div>
-									<h3 class="proj-card__title">Courier Operations App</h3>
-									<p class="proj-card__meta">Black Arrow Express &middot; Philippines</p>
-									<div class="proj-card__stack">
-										<span class="exp-chip">Laravel</span>
-										<span class="exp-chip">PHP</span>
-										<span class="exp-chip">MySQL</span>
-									</div>
-									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
-								</div>
-							</a>
-						</article>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-padding animate-box">
-						<article class="proj-card">
-							<a href="https://github.com/nilskie06" class="proj-card__link" target="_blank" rel="noopener noreferrer">
-								<div class="proj-card__thumb" style="background-image: url(images/work-itsupport.svg);">
-									<span class="proj-card__status proj-card__status--archive">ARCHIVE</span>
-								</div>
-								<div class="proj-card__body">
-									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">it-systems-support</span></div>
-									<h3 class="proj-card__title">IT Systems &amp; Support</h3>
-									<p class="proj-card__meta">KLG International, Inc. &middot; Parañaque City</p>
-									<div class="proj-card__stack">
-										<span class="exp-chip">Linux</span>
-										<span class="exp-chip">Networking</span>
-										<span class="exp-chip">PHP</span>
-									</div>
-									<span class="proj-card__cta">View project <span class="proj-card__arrow">&rarr;</span></span>
-								</div>
-							</a>
-						</article>
-					</div>
-
-
-					<div class="row work-grid">
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/customs-hs-code" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> customs-hs-code</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.customs_hs_code();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">customs-hs-code</span></div>
-										<h3 class="proj-card__title">Customs HS Code Lookup</h3>
-										<p class="proj-card__meta">HS code lookup, tariff calculation &amp; customs duty estimation for international trade</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ph-warehouse-toolkit" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ph-warehouse-toolkit</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ph_warehouse_toolkit();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-warehouse-toolkit</span></div>
-										<h3 class="proj-card__title">PH Warehouse Toolkit</h3>
-										<p class="proj-card__meta">Philippine warehousing utilities — peso currency, BIR compliance, inventory, barcode</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">TypeScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ph-order-processor" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ph-order-processor</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ph_order_processor();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-order-processor</span></div>
-										<h3 class="proj-card__title">PH Order Processor</h3>
-										<p class="proj-card__meta">Order processing system for logistics workflows</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">TypeScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ph-delivery-tracker" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ph-delivery-tracker</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ph_delivery_tracker();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-delivery-tracker</span></div>
-										<h3 class="proj-card__title">PH Delivery Tracker</h3>
-										<p class="proj-card__meta">Real-time delivery tracking module</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">TypeScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ph-inventory-alerts" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ph-inventory-alerts</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ph_inventory_alerts();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-inventory-alerts</span></div>
-										<h3 class="proj-card__title">PH Inventory Alerts</h3>
-										<p class="proj-card__meta">Inventory alert system with threshold notifications</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">TypeScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ph-volume-calculator" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ph-volume-calculator</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ph_volume_calculator();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-volume-calculator</span></div>
-										<h3 class="proj-card__title">PH Volume Calculator</h3>
-										<p class="proj-card__meta">Volume calculation utilities for warehouse, logistics &amp; shipping</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">TypeScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ph-transport" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ph-transport</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ph_transport();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-transport</span></div>
-										<h3 class="proj-card__title">PH Transport</h3>
-										<p class="proj-card__meta">npm package for transport system management</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">TypeScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/rider_admin" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> rider-admin</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.rider_admin();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">rider-admin</span></div>
-										<h3 class="proj-card__title">Rider Admin Dashboard</h3>
-										<p class="proj-card__meta">Black Arrow Express — rider management &amp; operations panel</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-											<span class="exp-chip">Laravel</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ims-mobile" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ims-mobile</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ims_mobile();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ims-mobile</span></div>
-										<h3 class="proj-card__title">IMS Mobile App</h3>
-										<p class="proj-card__meta">Inventory Management System — mobile companion app</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">Flutter</span>
-											<span class="exp-chip">Dart</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ims_pcl" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ims-pcl</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ims_pcl();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ims-pcl</span></div>
-										<h3 class="proj-card__title">IMS — Inventory Management</h3>
-										<p class="proj-card__meta">Full inventory management system — stock tracking &amp; warehouse ops</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">Laravel</span>
-											<span class="exp-chip">PHP</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/rental" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> rental</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.rental();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">rental</span></div>
-										<h3 class="proj-card__title">Rental Management</h3>
-										<p class="proj-card__meta">Rental management platform</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">Laravel</span>
-											<span class="exp-chip">Blade</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/school-management" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> school-management</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.school_management();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">school-management</span></div>
-										<h3 class="proj-card__title">School Management</h3>
-										<p class="proj-card__meta">School management system</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">PHP</span>
-											<span class="exp-chip">Laravel</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/saas-template" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> saas-template</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.saas_template();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">saas-template</span></div>
-										<h3 class="proj-card__title">SaaS Template</h3>
-										<p class="proj-card__meta">SaaS boilerplate &amp; starter template</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">Vue.js</span>
-											<span class="exp-chip">Node.js</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ticketing-api" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ticketing-api</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ticketing_api();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ticketing-api</span></div>
-										<h3 class="proj-card__title">Ticketing API</h3>
-										<p class="proj-card__meta">REST API for ticketing system</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">PHP</span>
-											<span class="exp-chip">REST API</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ticketing-ui" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-								<div class="proj-card__thumb proj-card__thumb--code">
-									<div class="proj-card__codewin">
-										<div class="proj-card__codewin-bar"><i></i><i></i><i></i></div>
-										<div class="proj-card__codewin-tab"><span class="tk-cmt">//</span> ticketing-ui</div>
-										<pre class="proj-card__codewin-body"><code>const app = require('./index');
-app.ticketing_ui();
-</code></pre>
-									</div>
-								</div>
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ticketing-ui</span></div>
-										<h3 class="proj-card__title">Ticketing UI</h3>
-										<p class="proj-card__meta">Frontend for the ticketing system</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">Vue.js</span>
-											<span class="exp-chip">JavaScript</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://www.npmjs.com/package/@ph-itdev/inventory-alerts" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">inventory-alerts</span></div>
-										<h3 class="proj-card__title">Inventory Alerts</h3>
-										<p class="proj-card__meta">Inventory stock level monitoring and alert system for warehouse management - track stock levels, get</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/shipping-rate-calc" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">shipping-rate-calc</span></div>
-										<h3 class="proj-card__title">Shipping Rate Calc</h3>
-										<p class="proj-card__meta">Calculate shipping rates by weight, dimensions, zone, and carrier with support for domestic and inte</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/packing-optimizer" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">packing-optimizer</span></div>
-										<h3 class="proj-card__title">Packing Optimizer</h3>
-										<p class="proj-card__meta">Optimize box selection and packing arrangements to minimize shipping volume and material waste.</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/rider_admin" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">rider_admin</span></div>
-										<h3 class="proj-card__title">Rider Admin</h3>
-										<p class="proj-card__meta">Blackarrow express rider admin</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ims_pcl" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ims_pcl</span></div>
-										<h3 class="proj-card__title">Ims Pcl</h3>
-										<p class="proj-card__meta">Inventory Management System</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">Laravel</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/fleet-tracker" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">fleet-tracker</span></div>
-										<h3 class="proj-card__title">Fleet Tracker</h3>
-										<p class="proj-card__meta">Track fleet vehicles with GPS coordinates, speed, heading, and geofencing for transportation logisti</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/container-tracker" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">container-tracker</span></div>
-										<h3 class="proj-card__title">Container Tracker</h3>
-										<p class="proj-card__meta">Track shipping containers across ports and vessels with status updates, ETA predictions, and milesto</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">HTML</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/warehouse-zone-manager" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">warehouse-zone-manager</span></div>
-										<h3 class="proj-card__title">Warehouse Zone Manager</h3>
-										<p class="proj-card__meta">Manage warehouse zones, bin locations, put-away rules, and zone-based picking strategies for fulfill</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/parcel-tracker" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">parcel-tracker</span></div>
-										<h3 class="proj-card__title">Parcel Tracker</h3>
-										<p class="proj-card__meta">Unified parcel tracking across carriers with status normalization, ETA prediction, and delivery even</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">HTML</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/delivery-window-scheduler" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">delivery-window-scheduler</span></div>
-										<h3 class="proj-card__title">Delivery Window Scheduler</h3>
-										<p class="proj-card__meta">Schedule and manage delivery windows with conflict detection, priority routing, and SLA compliance t</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/rental-vue" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">rental-vue</span></div>
-										<h3 class="proj-card__title">Rental Vue</h3>
-										<p class="proj-card__meta">Rental Management System built with Laravel + Vue.js</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">PHP</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/netflix-clone" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">netflix-clone</span></div>
-										<h3 class="proj-card__title">Netflix Clone</h3>
-										<p class="proj-card__meta">Netflix clone built with Laravel + Vue.js</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">PHP</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/load-optimizer" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">load-optimizer</span></div>
-										<h3 class="proj-card__title">Load Optimizer</h3>
-										<p class="proj-card__meta">Optimize truck load and pallet configurations using bin-packing heuristics to maximize space utiliza</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">HTML</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/supply-chain-events" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">supply-chain-events</span></div>
-										<h3 class="proj-card__title">Supply Chain Events</h3>
-										<p class="proj-card__meta">Event-driven supply chain notification system with event types, subscribers, filters, and audit logg</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">HTML</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/linkedin-portfolio" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">linkedin-portfolio</span></div>
-										<h3 class="proj-card__title">Linkedin Portfolio</h3>
-										<p class="proj-card__meta">LinkedIn-style profile page — Dockerized</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">HTML</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/ai-reels" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ai-reels</span></div>
-										<h3 class="proj-card__title">Ai Reels</h3>
-										<p class="proj-card__meta">Automate Facebook reels with AI — Bark TTS + SadTalker talking head</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">Python</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/freight-calculator" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">freight-calculator</span></div>
-										<h3 class="proj-card__title">Freight Calculator</h3>
-										<p class="proj-card__meta">Calculate freight costs based on weight, dimensions, distance, and carrier rates.</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-											<span class="exp-chip">npm</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/Water-Refill-Monitor" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">Water-Refill-Monitor</span></div>
-										<h3 class="proj-card__title">Water Refill Monitor</h3>
-										<p class="proj-card__meta">Repository for https://replit.com/@nbesingga/Water-Refill-Monitor</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/profit-calc" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">profit-calc</span></div>
-										<h3 class="proj-card__title">Profit Calc</h3>
-										<p class="proj-card__meta">Futuristic profit calculator for online sellers — Docker + cyberpunk UI</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">HTML</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/route-optimizer" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">route-optimizer</span></div>
-										<h3 class="proj-card__title">Route Optimizer</h3>
-										<p class="proj-card__meta">Optimize delivery routes using nearest-neighbor heuristic with distance matrix support for fleet log</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">JavaScript</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-
-
-						<div class="col-md-4 col-sm-6 col-padding animate-box">
-							<article class="proj-card">
-								<a href="https://github.com/nilskie06/water-refill" target="_blank" rel="noopener noreferrer" class="proj-card__link">
-									<div class="proj-card__body">
-										<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">water-refill</span></div>
-										<h3 class="proj-card__title">Water Refill</h3>
-										<p class="proj-card__meta">Water Refill</p>
-										<div class="proj-card__stack">
-											<span class="exp-chip">Laravel</span>
-										</div>
-										<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
-									</div>
-								</a>
-							</article>
-						</div>
-<div id="fh5co-blog">
-			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<h2>Something Awesome is Brewing&hellip; &#9749;</h2>
-						<p style="margin-bottom: 0px!important;">
-							Still under construction &mdash; like a pizza in the oven or a feature waiting to be deployed.
-							Check back soon for more magic, code, and possibly snacks. &#128679;&#128104;&#8205;&#128187;
+				<div class="hero__grid">
+					<div class="reveal">
+						<span class="status-pill"><span class="status-dot"></span> Available for new opportunities</span>
+						<p class="hero__name">Nilo Besingga — Application Developer</p>
+						<h1 class="hero__title">I build reliable software for <em>logistics</em>, enterprise &amp; mobile.</h1>
+						<p class="hero__lead">
+							8+ years shipping production web and mobile applications with Laravel, Vue.js and
+							Flutter — and using AI-assisted workflows to deliver faster without cutting corners.
 						</p>
+						<div class="hero__cta">
+							<a href="#contact" class="btn btn--primary">Get in touch <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+							<a href="resume.pdf" class="btn btn--ghost" download><svg class="icon"><use href="#i-download"/></svg> Download résumé</a>
+						</div>
+						<div class="hero__social">
+							<a href="https://github.com/nilskie06" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"/></svg> GitHub</a>
+							<a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-linkedin"/></svg> LinkedIn</a>
+						</div>
 					</div>
-				</div>
-			</div>
-		</div>
 
-		<div id="fh5co-started" class="fh5co-bg-dark">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-10 col-md-offset-1">
-						<div class="cta-card">
-							<header class="cta-card__chrome">
-								<span class="cta-card__dots"><i></i><i></i><i></i></span>
-								<span class="cta-card__path">~/contact/<span class="tab-active">availability.md</span></span>
-								<span class="cta-status"><span class="cta-status__dot"></span> open to opportunities &middot; 2026</span>
-							</header>
-							<div class="cta-card__body">
-								<div class="cta-card__intro">
-									<div class="cta-card__label">// hire-me</div>
-									<h2 class="cta-card__title">Let&rsquo;s Work Together</h2>
-									<p class="cta-card__lead">
-										Available for <strong>full-time</strong>, <strong>contract</strong>, or
-										<strong>freelance</strong> engagements &mdash; <strong>remote</strong>, hybrid,
-										or onsite. If you&rsquo;re hiring an application developer who can own
-										features end-to-end and ship reliably, I&rsquo;d be glad to talk.
-									</p>
-								</div>
-
-								<div class="cta-email">
-									<span class="cta-email__icon">@</span>
-									<a class="cta-email__addr" href="mailto:nbesingga@gmail.com">nbesingga@gmail.com</a>
-									<button class="cta-email__copy cfg-copy" type="button" data-copy="nbesingga@gmail.com" aria-label="copy email">copy</button>
-								</div>
-
-								<div class="cta-actions">
-									<a href="mailto:nbesingga@gmail.com" class="cta-btn cta-btn--primary">
-										<span class="cta-btn__icon"><i class="icon-envelope"></i></span>
-										<span class="cta-btn__label">
-											<span class="cta-btn__caption">Get in touch</span>
-											<span class="cta-btn__sub">primary channel &middot; fastest reply</span>
-										</span>
-										<span class="cta-btn__arrow">&rarr;</span>
-									</a>
-									<a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer" class="cta-btn">
-										<span class="cta-btn__icon"><i class="icon-linkedin2"></i></span>
-										<span class="cta-btn__label">
-											<span class="cta-btn__caption">View LinkedIn</span>
-											<span class="cta-btn__sub">profile &middot; recommendations</span>
-										</span>
-										<span class="cta-btn__arrow">&rarr;</span>
-									</a>
-									<a href="resume.pdf" download class="cta-btn">
-										<span class="cta-btn__icon"><i class="icon-download"></i></span>
-										<span class="cta-btn__label">
-											<span class="cta-btn__caption">Download Resume</span>
-											<span class="cta-btn__sub">PDF &middot; one-pager</span>
-										</span>
-										<span class="cta-btn__arrow">&darr;</span>
-									</a>
-								</div>
-
-								<div class="cta-meta">
-									<div class="cta-meta__item">
-										<span class="cta-meta__k">timezone</span>
-										<span class="cta-meta__v">GMT+8 &middot; PHT</span>
-									</div>
-									<div class="cta-meta__item">
-										<span class="cta-meta__k">location</span>
-										<span class="cta-meta__v">Dolho Bato, Leyte &middot; PH</span>
-									</div>
-									<div class="cta-meta__item">
-										<span class="cta-meta__k">stack</span>
-										<span class="cta-meta__v">laravel &middot; vue &middot; flutter</span>
-									</div>
-									<div class="cta-meta__item">
-										<span class="cta-meta__k">response</span>
-										<span class="cta-meta__v">&lt; 24 hours</span>
-									</div>
-								</div>
-							</div>
+					<div class="hero__portrait reveal">
+						<img class="hero__photo" src="images/1615352107595.jpg" alt="Portrait of Nilo Besingga" width="380" height="475">
+						<div class="hero__card">
+							<span class="hero__card-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
+							<div><strong>Leyte, Philippines</strong><span>GMT+8 · Remote-friendly</span></div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
 
-	</div>
-
-	<div id="fh5co-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p>&copy; 2026 Nilo Besingga. All rights reserved.<br>
-						Crafted with &#128187; + &#9749; &nbsp;&middot;&nbsp; Powered by clean code, caffeine, and Claude AI.</p>
+				<div class="stats reveal">
+					<div class="stat"><span class="stat__num">8+</span><span class="stat__label">Years shipping software</span></div>
+					<div class="stat"><span class="stat__num">50+</span><span class="stat__label">Projects delivered</span></div>
+					<div class="stat"><span class="stat__num">6</span><span class="stat__label">Companies</span></div>
+					<div class="stat"><span class="stat__num">3</span><span class="stat__label">Countries</span></div>
 				</div>
 			</div>
+		</section>
+
+		<!-- ============ About ============ -->
+		<section class="section section--alt" id="about">
+			<div class="container">
+				<div class="section__head reveal">
+					<span class="eyebrow">About</span>
+					<h2 class="section__title">Engineer, builder, <em>problem-solver.</em></h2>
+				</div>
+
+				<div class="about__grid">
+					<div class="about__body reveal">
+						<p>
+							I'm an Application Developer with <strong>8+ years</strong> shipping production web and
+							mobile applications across logistics, enterprise, and freelance projects.
+						</p>
+						<p>
+							I specialize in <strong>Vue.js</strong> and <strong>Laravel</strong> on the web,
+							<strong>Flutter</strong> on mobile, and clean REST API design to connect systems. I work
+							end-to-end — from requirements and architecture through implementation, testing, and
+							deployment — and pair daily with <strong>Claude AI</strong> to accelerate delivery without
+							sacrificing code quality.
+						</p>
+						<ul class="checklist">
+							<li><svg class="icon"><use href="#i-check"/></svg> Owns features end-to-end, web and mobile</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Bias for shipping, with engineering discipline</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Strong UX and API design instincts</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Leaves the codebase healthier than found</li>
+						</ul>
+					</div>
+
+					<aside class="reveal">
+						<div class="card facts">
+							<div class="facts__row"><span class="facts__k">Email</span><span class="facts__v"><a href="mailto:nbesingga@gmail.com">nbesingga@gmail.com</a><button class="copy-btn" type="button" data-copy="nbesingga@gmail.com" aria-label="Copy email address">Copy</button></span></div>
+							<div class="facts__row"><span class="facts__k">Phone</span><span class="facts__v"><a href="tel:+639353330652">+63 935 333 0652</a></span></div>
+							<div class="facts__row"><span class="facts__k">Location</span><span class="facts__v">Dolho Bato, Leyte · Philippines</span></div>
+							<div class="facts__row"><span class="facts__k">Timezone</span><span class="facts__v">GMT+8 (PHT)</span></div>
+							<div class="facts__row"><span class="facts__k">Work style</span><span class="facts__v">Remote · Hybrid · Onsite</span></div>
+							<div class="facts__row"><span class="facts__k">Languages</span><span class="facts__v">English, Filipino</span></div>
+						</div>
+
+						<div class="card now">
+							<div class="now__head"><span class="now__title">Now</span><span>Updated May 2026</span></div>
+							<dl>
+								<div><dt>Shipping</dt><dd>Enterprise logistics platform — Laravel + Vue.js</dd></div>
+								<div><dt>Learning</dt><dd>Advanced Flutter patterns · n8n agents</dd></div>
+								<div><dt>Reading</dt><dd>Clean Architecture</dd></div>
+								<div><dt>Open to</dt><dd>Full-time, contract, freelance</dd></div>
+							</dl>
+						</div>
+					</aside>
+				</div>
+
+				<h3 class="subhead reveal">Engineering principles</h3>
+				<div class="principles reveal">
+					<div class="principle"><span class="principle__num">01</span><p>Ship the smallest useful version, then iterate.</p></div>
+					<div class="principle"><span class="principle__num">02</span><p>Readable code beats clever code — future-you is grateful.</p></div>
+					<div class="principle"><span class="principle__num">03</span><p>Test the hard parts. Mock the boundaries, not the logic.</p></div>
+					<div class="principle"><span class="principle__num">04</span><p>Leave the codebase healthier than you found it.</p></div>
+					<div class="principle"><span class="principle__num">05</span><p>Strong opinions, weakly held — listen, then choose.</p></div>
+					<div class="principle"><span class="principle__num">06</span><p>Logs and types pay rent every single day.</p></div>
+				</div>
+
+				<h3 class="subhead reveal">For recruiters</h3>
+				<div class="faq reveal">
+					<details>
+						<summary>Notice period &amp; earliest start? <svg class="icon"><use href="#i-plus"/></svg></summary>
+						<p>30-day notice from my current role. Available for a serious offer within ~30–45 days of signing.</p>
+					</details>
+					<details>
+						<summary>Salary range / day rate? <svg class="icon"><use href="#i-plus"/></svg></summary>
+						<p>Negotiable based on scope and engagement type. Happy to share specifics on a call once the role is clear.</p>
+					</details>
+					<details>
+						<summary>Remote, hybrid, or onsite? <svg class="icon"><use href="#i-plus"/></svg></summary>
+						<p>All three are open. Strong async-collaboration habits; based in Leyte (GMT+8) with good overlap to APAC, EU mornings, and US evenings.</p>
+					</details>
+					<details>
+						<summary>Contract or full-time? <svg class="icon"><use href="#i-plus"/></svg></summary>
+						<p>Either — tell me what you need. Currently full-time at AAI; open to contract work on the side or a full move for the right role.</p>
+					</details>
+					<details>
+						<summary>Visa / work eligibility? <svg class="icon"><use href="#i-plus"/></svg></summary>
+						<p>Philippine citizen. Can work from the Philippines or contract globally without sponsorship. Sponsorship needed for onsite roles outside the Philippines.</p>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ Experience ============ -->
+		<section class="section" id="experience">
+			<div class="container">
+				<div class="section__head reveal">
+					<span class="eyebrow">Experience</span>
+					<h2 class="section__title">Where I've <em>built</em> things.</h2>
+					<p class="section__lead">Six roles across logistics, enterprise software, and freelance — in the Philippines, the UAE, and remote.</p>
+				</div>
+
+				<div class="timeline">
+					<article class="job reveal">
+						<div class="job__period">Mar 2026 — Present<br><span class="job__current">Current role</span></div>
+						<div>
+							<h3 class="job__role">Software Engineer</h3>
+							<p class="job__company">AAI Worldwide Logistics <span>· Philippines</span></p>
+							<p class="job__summary">Leading software development initiatives, building and maintaining enterprise-grade web applications that support logistics and supply chain operations.</p>
+							<ul class="job__bullets">
+								<li>Designing and shipping full-stack features for the company's logistics platform using Laravel, Vue.js, and Flutter — from requirements through production deployment.</li>
+								<li>Adopted AI-assisted delivery with Claude AI to compress prototyping and refactoring cycles while keeping code review and engineering judgment in the loop.</li>
+								<li>Collaborating across teams to design robust APIs, streamline data workflows, and deliver user-friendly interfaces for complex operational systems.</li>
+								<li>Contributing to internal tooling, automation, and system integrations that improve operational efficiency.</li>
+							</ul>
+							<div class="tags">
+								<span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">MySQL</span><span class="tag">Docker</span><span class="tag tag--accent">Claude AI</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="job reveal">
+						<div class="job__period">Nov 2024 — Oct 2025</div>
+						<div>
+							<h3 class="job__role">Software Engineer</h3>
+							<p class="job__company">CRESCO Software Technology <span>· Dubai, UAE · Onsite</span></p>
+							<p class="job__summary">Delivered enterprise software solutions for Crescotec L.L.C-FZ in a fast-paced international environment.</p>
+							<ul class="job__bullets">
+								<li>Built and maintained scalable enterprise applications as part of cross-functional teams across the full delivery lifecycle.</li>
+								<li>Designed and implemented backend APIs and frontend interfaces for ERP modules used in business-critical operations.</li>
+								<li>Applied industry best practices to deliver high-quality, maintainable software products.</li>
+							</ul>
+							<div class="tags">
+								<span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span><span class="tag">REST API</span><span class="tag">ERP</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="job reveal">
+						<div class="job__period">2023 — Jan 2026</div>
+						<div>
+							<h3 class="job__role">Freelance Web Developer</h3>
+							<p class="job__company">TersusNet <span>· Remote</span></p>
+							<p class="job__summary">Developed, tested, and maintained responsive websites for clients across industries — full-stack, from design to deployment.</p>
+							<ul class="job__bullets">
+								<li>Built clean, efficient front-ends with HTML, CSS, JavaScript and Vue.js, and integrated APIs and databases using PHP, Laravel, and Node.js.</li>
+								<li>Optimized applications for speed, scalability, and security, partnering with designers on polished UI/UX improvements.</li>
+								<li>Managed multiple concurrent client projects with consistent on-time delivery and clear communication.</li>
+							</ul>
+							<div class="tags">
+								<span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">Node.js</span><span class="tag">PHP</span><span class="tag">REST API</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="job reveal">
+						<div class="job__period">Jun 2021 — Nov 2024</div>
+						<div>
+							<h3 class="job__role">Application Developer</h3>
+							<p class="job__company">AAI Worldwide Logistics <span>· Philippines</span></p>
+							<p class="job__summary">Three years of continuous delivery on web applications supporting logistics, warehousing, and supply chain operations.</p>
+							<ul class="job__bullets">
+								<li>Built and integrated APIs connecting internal systems and external services for seamless data flow across platforms.</li>
+								<li>Developed key features for the FMS, CRM, and TMS — from reporting tools to operational dashboards — using Vue.js and Laravel.</li>
+								<li>Worked closely with operations and management to translate business requirements into reliable, scalable software.</li>
+							</ul>
+							<div class="tags">
+								<span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">Linux</span><span class="tag">Docker</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="job reveal">
+						<div class="job__period">Mar 2018 — Aug 2020</div>
+						<div>
+							<h3 class="job__role">Application Developer</h3>
+							<p class="job__company">Black Arrow Express <span>· Philippines</span></p>
+							<p class="job__summary">Developed and maintained internal applications for the day-to-day operations of a fast-growing courier and logistics company.</p>
+							<ul class="job__bullets">
+								<li>Worked across frontend interfaces and backend logic — from operational forms to data reporting tools used by operations teams.</li>
+								<li>Built features that streamlined package tracking, billing workflows, and internal operational data management.</li>
+								<li>Delivered fast, reliable features under real business pressure in a high-volume environment.</li>
+							</ul>
+							<div class="tags">
+								<span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">jQuery</span><span class="tag">Bootstrap</span>
+							</div>
+						</div>
+					</article>
+
+					<article class="job reveal">
+						<div class="job__period">Apr 2017 — Mar 2018</div>
+						<div>
+							<h3 class="job__role">IT Support Specialist</h3>
+							<p class="job__company">KLG International, Inc. <span>· Parañaque City, Philippines</span></p>
+							<p class="job__summary">Provided technical support to internal teams — maintaining systems, troubleshooting hardware and software, and keeping operations running.</p>
+							<ul class="job__bullets">
+								<li>Supported network infrastructure and resolved user issues promptly to minimize downtime.</li>
+								<li>Managed server maintenance, helpdesk ticketing, and hardware troubleshooting for a multi-department office.</li>
+								<li>Built a strong foundation in Linux, networking, and PHP that led into full-stack development.</li>
+							</ul>
+							<div class="tags">
+								<span class="tag">Linux</span><span class="tag">Windows Server</span><span class="tag">Networking</span><span class="tag">PHP</span><span class="tag">MySQL</span>
+							</div>
+						</div>
+					</article>
+				</div>
+
+				<h3 class="subhead reveal">Education</h3>
+				<div class="timeline">
+					<article class="job reveal">
+						<div class="job__period">2013 — 2017</div>
+						<div>
+							<h3 class="job__role">Bachelor's Degree, Computer Programming</h3>
+							<p class="job__company">Southern Leyte State University <span>· Philippines</span></p>
+							<p class="job__summary">A solid foundation in programming, databases, and software development, capped by a capstone project covering the full development lifecycle — requirements, design, implementation, and presentation.</p>
+							<div class="tags">
+								<span class="tag">C / C++</span><span class="tag">Java</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Networking</span>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ Services ============ -->
+		<section class="section section--alt" id="services">
+			<div class="container">
+				<div class="section__head reveal">
+					<span class="eyebrow">Services</span>
+					<h2 class="section__title">What I can do <em>for your team.</em></h2>
+					<p class="section__lead">End-to-end engineering across the modern web and mobile stack, with AI-assisted workflows where they create real leverage.</p>
+				</div>
+
+				<div class="services">
+					<article class="card service reveal">
+						<span class="service__num">01</span>
+						<h3 class="service__title">Full-Stack Web Development</h3>
+						<p class="service__lead">Production web applications, end-to-end — from schema to deploy.</p>
+						<ul class="service__list">
+							<li><svg class="icon"><use href="#i-check"/></svg> Vue.js single-page apps &amp; component libraries</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Laravel back-ends with clean domain models</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Database design, migrations &amp; query tuning</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Authentication, authorization &amp; audit logging</li>
+						</ul>
+					</article>
+
+					<article class="card service reveal">
+						<span class="service__num">02</span>
+						<h3 class="service__title">Mobile App Development</h3>
+						<p class="service__lead">Single-codebase Flutter apps that feel native on iOS and Android.</p>
+						<ul class="service__list">
+							<li><svg class="icon"><use href="#i-check"/></svg> Flutter / Dart cross-platform builds</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Offline-first sync &amp; local storage</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> REST integration &amp; push notifications</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Play Store &amp; App Store release pipelines</li>
+						</ul>
+					</article>
+
+					<article class="card service service--featured reveal">
+						<span class="service__num">03</span>
+						<h3 class="service__title">AI-Assisted Delivery</h3>
+						<p class="service__lead">Compress delivery timelines with Claude — without compromising on quality.</p>
+						<ul class="service__list">
+							<li><svg class="icon"><use href="#i-check"/></svg> Pair-programming with Claude &amp; agentic tools</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Rapid prototyping from a spec or rough idea</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Large-scale refactors with safety nets</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> AI-augmented code review &amp; documentation</li>
+						</ul>
+					</article>
+
+					<article class="card service reveal">
+						<span class="service__num">04</span>
+						<h3 class="service__title">API Design &amp; Integration</h3>
+						<p class="service__lead">Reliable contracts that let teams and systems move independently.</p>
+						<ul class="service__list">
+							<li><svg class="icon"><use href="#i-check"/></svg> RESTful API design &amp; documentation</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Token-based auth (JWT, OAuth flows)</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Third-party integrations &amp; webhooks</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Versioning, rate-limiting &amp; error contracts</li>
+						</ul>
+					</article>
+
+					<article class="card service reveal">
+						<span class="service__num">05</span>
+						<h3 class="service__title">DevOps &amp; Cloud</h3>
+						<p class="service__lead">Docker, Linux servers, and CI/CD pipelines that keep apps running 24/7.</p>
+						<ul class="service__list">
+							<li><svg class="icon"><use href="#i-check"/></svg> Docker containerization &amp; Compose stacks</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Linux server setup, hardening &amp; monitoring</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Nginx / Apache reverse proxy configuration</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> CI/CD with automated testing &amp; deploy</li>
+						</ul>
+					</article>
+
+					<article class="card service reveal">
+						<span class="service__num">06</span>
+						<h3 class="service__title">Maintenance &amp; Support</h3>
+						<p class="service__lead">Post-launch engineering that keeps products healthy and fast.</p>
+						<ul class="service__list">
+							<li><svg class="icon"><use href="#i-check"/></svg> Bug triage &amp; targeted fixes</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Security patches &amp; dependency upgrades</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Performance audits &amp; optimization</li>
+							<li><svg class="icon"><use href="#i-check"/></svg> Incremental feature work &amp; backlog grooming</li>
+						</ul>
+					</article>
+				</div>
+
+				<div class="services-foot reveal">
+					<p>Need something that's not on the list? Happy to scope it together.</p>
+					<a href="#contact" class="btn btn--ghost btn--sm">Start a conversation <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ Skills ============ -->
+		<section class="section" id="skills">
+			<div class="container">
+				<div class="section__head reveal">
+					<span class="eyebrow">Skills</span>
+					<h2 class="section__title">A pragmatic <em>toolkit.</em></h2>
+					<p class="section__lead">Where I spend most of my time — all hands-on, production experience.</p>
+				</div>
+
+				<div class="skills">
+					<div class="card skill-group reveal">
+						<h3 class="skill-group__title">Frontend</h3>
+						<p class="skill-group__desc">Interfaces people enjoy using</p>
+						<ul>
+							<li>Vue.js <span>Expert</span></li>
+							<li>HTML5 / CSS3 <span>Expert</span></li>
+							<li>JavaScript <span>Advanced</span></li>
+							<li>Bootstrap <span>Advanced</span></li>
+							<li>Figma / UI <span>Proficient</span></li>
+						</ul>
+					</div>
+					<div class="card skill-group reveal">
+						<h3 class="skill-group__title">Backend</h3>
+						<p class="skill-group__desc">APIs, data and business logic</p>
+						<ul>
+							<li>Laravel <span>Advanced</span></li>
+							<li>PHP <span>Advanced</span></li>
+							<li>MySQL / SQL <span>Advanced</span></li>
+							<li>REST &amp; integrations <span>Advanced</span></li>
+							<li>Node.js <span>Proficient</span></li>
+						</ul>
+					</div>
+					<div class="card skill-group reveal">
+						<h3 class="skill-group__title">Mobile</h3>
+						<p class="skill-group__desc">Cross-platform apps</p>
+						<ul>
+							<li>Flutter <span>Proficient</span></li>
+							<li>Dart <span>Proficient</span></li>
+						</ul>
+					</div>
+					<div class="card skill-group reveal">
+						<h3 class="skill-group__title">AI &amp; DevOps</h3>
+						<p class="skill-group__desc">Delivery and infrastructure</p>
+						<ul>
+							<li>Claude AI <span>Expert</span></li>
+							<li>AI-assisted delivery <span>Advanced</span></li>
+							<li>Git / GitHub <span>Expert</span></li>
+							<li>Linux / DevOps <span>Proficient</span></li>
+							<li>Docker <span>Proficient</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="card toolbox reveal">
+					<div class="toolbox__row">
+						<span class="toolbox__k">AI assistants</span>
+						<div class="tags"><span class="tag tag--accent">Claude AI</span><span class="tag tag--accent">Claude Code</span><span class="tag">GitHub Copilot</span><span class="tag">Cursor</span></div>
+					</div>
+					<div class="toolbox__row">
+						<span class="toolbox__k">Dev tooling</span>
+						<div class="tags"><span class="tag">VS Code</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Docker</span><span class="tag">npm / Vite</span><span class="tag">Composer</span><span class="tag">Android Studio</span></div>
+					</div>
+					<div class="toolbox__row">
+						<span class="toolbox__k">Design &amp; API</span>
+						<div class="tags"><span class="tag">Figma</span><span class="tag">Postman</span><span class="tag">Swagger</span><span class="tag">REST APIs</span></div>
+					</div>
+					<div class="toolbox__row">
+						<span class="toolbox__k">Infrastructure</span>
+						<div class="tags"><span class="tag">Nginx</span><span class="tag">Ubuntu / Debian</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Firebase</span><span class="tag">SSH / SFTP</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ Work ============ -->
+		<section class="section section--alt" id="work">
+			<div class="container">
+				<div class="section__head reveal">
+					<span class="eyebrow">Selected work</span>
+					<h2 class="section__title">Production systems, <em>shipped.</em></h2>
+					<p class="section__lead">Internal platforms and client builds across logistics, enterprise, courier, and IT — delivered in three countries.</p>
+				</div>
+
+				<div class="featured">
+					<article class="card project reveal">
+						<div class="project__thumb"><img src="images/work-logistics.svg" alt="Logistics platform dashboard preview" loading="lazy" width="600" height="400"></div>
+						<div class="project__body">
+							<span class="project__kicker">AAI Worldwide Logistics · Philippines</span>
+							<h3 class="project__title">Logistics Web Platform</h3>
+							<p class="project__desc">Enterprise platform supporting logistics and supply chain operations, with web and mobile clients.</p>
+							<div class="tags"><span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">Flutter</span><span class="tag">MySQL</span></div>
+							<div class="project__foot"><span>Proprietary · 2026 — present</span></div>
+						</div>
+					</article>
+
+					<article class="card project reveal">
+						<div class="project__thumb"><img src="images/work-enterprise.svg" alt="Enterprise ERP system preview" loading="lazy" width="600" height="400"></div>
+						<div class="project__body">
+							<span class="project__kicker">CRESCO Software Technology · Dubai, UAE</span>
+							<h3 class="project__title">Enterprise ERP System</h3>
+							<p class="project__desc">Backend APIs and front-end interfaces for ERP modules used in business-critical operations.</p>
+							<div class="tags"><span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">PostgreSQL</span></div>
+							<div class="project__foot"><span>Proprietary · 2024 — 2025</span></div>
+						</div>
+					</article>
+
+					<article class="card project reveal">
+						<div class="project__thumb"><img src="images/work-appdev.svg" alt="FMS, CRM and TMS dashboards preview" loading="lazy" width="600" height="400"></div>
+						<div class="project__body">
+							<span class="project__kicker">AAI Worldwide Logistics · Philippines</span>
+							<h3 class="project__title">FMS, CRM &amp; TMS Suite</h3>
+							<p class="project__desc">Reporting tools and operational dashboards across freight, customer, and transport management systems.</p>
+							<div class="tags"><span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">Docker</span></div>
+							<div class="project__foot"><span>Proprietary · 2021 — 2024</span></div>
+						</div>
+					</article>
+
+					<article class="card project reveal">
+						<div class="project__thumb"><img src="images/work-freelance.svg" alt="Freelance web projects preview" loading="lazy" width="600" height="400"></div>
+						<div class="project__body">
+							<span class="project__kicker">TersusNet · Remote</span>
+							<h3 class="project__title">Client Web Projects</h3>
+							<p class="project__desc">Responsive, full-stack websites for clients across industries, from design through deployment.</p>
+							<div class="tags"><span class="tag">Laravel</span><span class="tag">Vue.js</span><span class="tag">Node.js</span></div>
+							<div class="project__foot"><span>Freelance · 2023 — 2026</span></div>
+						</div>
+					</article>
+
+					<article class="card project reveal">
+						<div class="project__thumb"><img src="images/work-courier.svg" alt="Courier operations app preview" loading="lazy" width="600" height="400"></div>
+						<div class="project__body">
+							<span class="project__kicker">Black Arrow Express · Philippines</span>
+							<h3 class="project__title">Courier Operations App</h3>
+							<p class="project__desc">Package tracking, billing workflows, and rider management for a high-volume courier business.</p>
+							<div class="tags"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span></div>
+							<div class="project__foot"><span>2018 — 2020</span><a href="https://github.com/nilskie06/rider_admin" target="_blank" rel="noopener noreferrer">Source <svg class="icon"><use href="#i-arrow-up-right"/></svg></a></div>
+						</div>
+					</article>
+
+					<article class="card project reveal">
+						<div class="project__thumb"><img src="images/work-itsupport.svg" alt="IT systems and support preview" loading="lazy" width="600" height="400"></div>
+						<div class="project__body">
+							<span class="project__kicker">KLG International, Inc. · Parañaque City</span>
+							<h3 class="project__title">IT Systems &amp; Support</h3>
+							<p class="project__desc">Network infrastructure, server maintenance, and helpdesk operations for a multi-department office.</p>
+							<div class="tags"><span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">PHP</span></div>
+							<div class="project__foot"><span>2017 — 2018</span></div>
+						</div>
+					</article>
+				</div>
+
+				<div class="oss-head reveal">
+					<div>
+						<h3 class="subhead">Open source &amp; side projects</h3>
+						<p>Libraries, tools and experiments — mostly logistics and warehousing utilities.</p>
+					</div>
+					<a href="https://github.com/nilskie06" class="btn btn--ghost btn--sm" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"/></svg> All repositories</a>
+				</div>
+
+				<div class="oss-tools">
+					<label class="search">
+						<span class="sr-only">Search projects</span>
+						<svg class="icon"><use href="#i-search"/></svg>
+						<input type="search" id="oss-search" placeholder="Search projects…" autocomplete="off">
+					</label>
+					<div class="filters" id="oss-filters" role="group" aria-label="Filter by technology"></div>
+				</div>
+
+				<!--
+					Auto-sync note: the GitHub sync bot appends new project cards directly before
+					the empty fh5co-blog marker div at the end of this list. Keep that marker as the
+					last child of #oss-list (and don't write its opening tag anywhere else in this
+					file) so new repos land here.
+				-->
+				<div class="oss-list" id="oss-list">
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/customs-hs-code" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">customs-hs-code</span></div>
+									<h3 class="proj-card__title">Customs HS Code Lookup</h3>
+									<p class="proj-card__meta">HS code lookup, tariff calculation &amp; customs duty estimation for international trade.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ph-warehouse-toolkit" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-warehouse-toolkit</span></div>
+									<h3 class="proj-card__title">PH Warehouse Toolkit</h3>
+									<p class="proj-card__meta">Philippine warehousing utilities — peso currency, BIR compliance, inventory, and barcodes.</p>
+									<div class="proj-card__stack"><span class="exp-chip">TypeScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ph-order-processor" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-order-processor</span></div>
+									<h3 class="proj-card__title">PH Order Processor</h3>
+									<p class="proj-card__meta">Order processing system for logistics workflows.</p>
+									<div class="proj-card__stack"><span class="exp-chip">TypeScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ph-delivery-tracker" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-delivery-tracker</span></div>
+									<h3 class="proj-card__title">PH Delivery Tracker</h3>
+									<p class="proj-card__meta">Real-time delivery tracking module.</p>
+									<div class="proj-card__stack"><span class="exp-chip">TypeScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ph-inventory-alerts" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-inventory-alerts</span></div>
+									<h3 class="proj-card__title">PH Inventory Alerts</h3>
+									<p class="proj-card__meta">Inventory alert system with threshold notifications.</p>
+									<div class="proj-card__stack"><span class="exp-chip">TypeScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ph-volume-calculator" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-volume-calculator</span></div>
+									<h3 class="proj-card__title">PH Volume Calculator</h3>
+									<p class="proj-card__meta">Volume calculation utilities for warehousing, logistics &amp; shipping.</p>
+									<div class="proj-card__stack"><span class="exp-chip">TypeScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ph-transport" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ph-transport</span></div>
+									<h3 class="proj-card__title">PH Transport</h3>
+									<p class="proj-card__meta">npm package for transport system management.</p>
+									<div class="proj-card__stack"><span class="exp-chip">TypeScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://www.npmjs.com/package/@ph-itdev/inventory-alerts" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">inventory-alerts</span></div>
+									<h3 class="proj-card__title">Inventory Alerts <small>(npm)</small></h3>
+									<p class="proj-card__meta">Stock-level monitoring and alerting for warehouse management.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on npm <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/shipping-rate-calc" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">shipping-rate-calc</span></div>
+									<h3 class="proj-card__title">Shipping Rate Calc</h3>
+									<p class="proj-card__meta">Shipping rates by weight, dimensions, zone, and carrier — domestic and international.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/packing-optimizer" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">packing-optimizer</span></div>
+									<h3 class="proj-card__title">Packing Optimizer</h3>
+									<p class="proj-card__meta">Optimizes box selection and packing arrangements to minimize shipping volume and material waste.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/load-optimizer" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">load-optimizer</span></div>
+									<h3 class="proj-card__title">Load Optimizer</h3>
+									<p class="proj-card__meta">Truck load and pallet optimization using bin-packing heuristics to maximize space utilization.</p>
+									<div class="proj-card__stack"><span class="exp-chip">HTML</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/route-optimizer" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">route-optimizer</span></div>
+									<h3 class="proj-card__title">Route Optimizer</h3>
+									<p class="proj-card__meta">Delivery route optimization using a nearest-neighbor heuristic with distance-matrix support.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/fleet-tracker" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">fleet-tracker</span></div>
+									<h3 class="proj-card__title">Fleet Tracker</h3>
+									<p class="proj-card__meta">Fleet vehicle tracking with GPS coordinates, speed, heading, and geofencing.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/container-tracker" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">container-tracker</span></div>
+									<h3 class="proj-card__title">Container Tracker</h3>
+									<p class="proj-card__meta">Shipping container tracking across ports and vessels with status updates and ETA predictions.</p>
+									<div class="proj-card__stack"><span class="exp-chip">HTML</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/parcel-tracker" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">parcel-tracker</span></div>
+									<h3 class="proj-card__title">Parcel Tracker</h3>
+									<p class="proj-card__meta">Unified multi-carrier parcel tracking with status normalization and ETA prediction.</p>
+									<div class="proj-card__stack"><span class="exp-chip">HTML</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/warehouse-zone-manager" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">warehouse-zone-manager</span></div>
+									<h3 class="proj-card__title">Warehouse Zone Manager</h3>
+									<p class="proj-card__meta">Warehouse zones, bin locations, put-away rules, and zone-based picking strategies.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/delivery-window-scheduler" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">delivery-window-scheduler</span></div>
+									<h3 class="proj-card__title">Delivery Window Scheduler</h3>
+									<p class="proj-card__meta">Delivery window scheduling with conflict detection, priority routing, and SLA compliance.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/supply-chain-events" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">supply-chain-events</span></div>
+									<h3 class="proj-card__title">Supply Chain Events</h3>
+									<p class="proj-card__meta">Event-driven supply chain notifications with subscribers, filters, and audit logging.</p>
+									<div class="proj-card__stack"><span class="exp-chip">HTML</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/freight-calculator" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">freight-calculator</span></div>
+									<h3 class="proj-card__title">Freight Calculator</h3>
+									<p class="proj-card__meta">Freight costs based on weight, dimensions, distance, and carrier rates.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span><span class="exp-chip">npm</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/rider_admin" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">rider_admin</span></div>
+									<h3 class="proj-card__title">Rider Admin Dashboard</h3>
+									<p class="proj-card__meta">Black Arrow Express — rider management &amp; operations panel.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span><span class="exp-chip">Laravel</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ims_pcl" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ims_pcl</span></div>
+									<h3 class="proj-card__title">IMS — Inventory Management</h3>
+									<p class="proj-card__meta">Full inventory management system — stock tracking &amp; warehouse operations.</p>
+									<div class="proj-card__stack"><span class="exp-chip">Laravel</span><span class="exp-chip">PHP</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ims-mobile" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ims-mobile</span></div>
+									<h3 class="proj-card__title">IMS Mobile App</h3>
+									<p class="proj-card__meta">Inventory Management System — mobile companion app.</p>
+									<div class="proj-card__stack"><span class="exp-chip">Flutter</span><span class="exp-chip">Dart</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ticketing-api" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ticketing-api</span></div>
+									<h3 class="proj-card__title">Ticketing API</h3>
+									<p class="proj-card__meta">REST API for a ticketing system.</p>
+									<div class="proj-card__stack"><span class="exp-chip">PHP</span><span class="exp-chip">REST API</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ticketing-ui" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ticketing-ui</span></div>
+									<h3 class="proj-card__title">Ticketing UI</h3>
+									<p class="proj-card__meta">Front-end for the ticketing system.</p>
+									<div class="proj-card__stack"><span class="exp-chip">Vue.js</span><span class="exp-chip">JavaScript</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/saas-template" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">saas-template</span></div>
+									<h3 class="proj-card__title">SaaS Template</h3>
+									<p class="proj-card__meta">SaaS boilerplate &amp; starter template.</p>
+									<div class="proj-card__stack"><span class="exp-chip">Vue.js</span><span class="exp-chip">Node.js</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/rental-vue" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">rental-vue</span></div>
+									<h3 class="proj-card__title">Rental Management (Vue)</h3>
+									<p class="proj-card__meta">Rental management system built with Laravel + Vue.js.</p>
+									<div class="proj-card__stack"><span class="exp-chip">Laravel</span><span class="exp-chip">Vue.js</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/rental" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">rental</span></div>
+									<h3 class="proj-card__title">Rental Management</h3>
+									<p class="proj-card__meta">Rental management platform.</p>
+									<div class="proj-card__stack"><span class="exp-chip">Laravel</span><span class="exp-chip">Blade</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/school-management" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">school-management</span></div>
+									<h3 class="proj-card__title">School Management</h3>
+									<p class="proj-card__meta">School management system.</p>
+									<div class="proj-card__stack"><span class="exp-chip">PHP</span><span class="exp-chip">Laravel</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/water-refill" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">water-refill</span></div>
+									<h3 class="proj-card__title">Water Refill</h3>
+									<p class="proj-card__meta">Management app for a water refill business.</p>
+									<div class="proj-card__stack"><span class="exp-chip">Laravel</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/Water-Refill-Monitor" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">Water-Refill-Monitor</span></div>
+									<h3 class="proj-card__title">Water Refill Monitor</h3>
+									<p class="proj-card__meta">Monitoring dashboard for a water refill station, prototyped on Replit.</p>
+									<div class="proj-card__stack"><span class="exp-chip">JavaScript</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/profit-calc" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">profit-calc</span></div>
+									<h3 class="proj-card__title">Profit Calculator</h3>
+									<p class="proj-card__meta">Profit calculator for online sellers — Dockerized.</p>
+									<div class="proj-card__stack"><span class="exp-chip">HTML</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/ai-reels" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">ai-reels</span></div>
+									<h3 class="proj-card__title">AI Reels</h3>
+									<p class="proj-card__meta">Automates Facebook reels with AI — Bark TTS + SadTalker talking head.</p>
+									<div class="proj-card__stack"><span class="exp-chip">Python</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/linkedin-portfolio" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">linkedin-portfolio</span></div>
+									<h3 class="proj-card__title">LinkedIn-style Portfolio</h3>
+									<p class="proj-card__meta">LinkedIn-style profile page — Dockerized.</p>
+									<div class="proj-card__stack"><span class="exp-chip">HTML</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col-md-4 col-sm-6 col-padding animate-box">
+						<article class="proj-card">
+							<a href="https://github.com/nilskie06/netflix-clone" target="_blank" rel="noopener noreferrer" class="proj-card__link">
+								<div class="proj-card__body">
+									<div class="proj-card__path"><span class="tk-cmt">~/projects/</span><span class="tab-active">netflix-clone</span></div>
+									<h3 class="proj-card__title">Streaming App Clone</h3>
+									<p class="proj-card__meta">Netflix-style streaming UI built with Laravel + Vue.js.</p>
+									<div class="proj-card__stack"><span class="exp-chip">Laravel</span><span class="exp-chip">Vue.js</span></div>
+									<span class="proj-card__cta">View on GitHub <span class="proj-card__arrow">&rarr;</span></span>
+								</div>
+							</a>
+						</article>
+					</div>
+<div id="fh5co-blog"></div>
+				</div>
+				<p class="oss-empty" id="oss-empty" hidden>No projects match that search.</p>
+			</div>
+		</section>
+
+		<!-- ============ Contact ============ -->
+		<section class="section" id="contact">
+			<div class="container">
+				<div class="contact reveal">
+					<div class="contact__grid">
+						<div>
+							<span class="eyebrow">Let's work together</span>
+							<h2 class="contact__title">Have a project or role <em>in mind?</em></h2>
+							<p class="contact__lead">
+								Available for <strong>full-time</strong>, <strong>contract</strong>, or <strong>freelance</strong>
+								engagements — remote, hybrid, or onsite. If you need an application developer who can own
+								features end-to-end and ship reliably, I'd be glad to talk.
+							</p>
+							<div>
+								<a class="contact__email" href="mailto:nbesingga@gmail.com">nbesingga@gmail.com</a>
+								<button class="copy-btn" type="button" data-copy="nbesingga@gmail.com" aria-label="Copy email address">Copy</button>
+							</div>
+						</div>
+
+						<div class="contact__actions">
+							<a href="mailto:nbesingga@gmail.com" class="contact-link contact-link--primary">
+								<svg class="icon"><use href="#i-mail"/></svg>
+								<span class="contact-link__label"><strong>Send an email</strong><span>Fastest reply — usually within 24 hours</span></span>
+								<svg class="icon"><use href="#i-arrow-right"/></svg>
+							</a>
+							<a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer" class="contact-link">
+								<svg class="icon"><use href="#i-linkedin"/></svg>
+								<span class="contact-link__label"><strong>Connect on LinkedIn</strong><span>Profile &amp; recommendations</span></span>
+								<svg class="icon"><use href="#i-arrow-up-right"/></svg>
+							</a>
+							<a href="resume.pdf" download class="contact-link">
+								<svg class="icon"><use href="#i-download"/></svg>
+								<span class="contact-link__label"><strong>Download résumé</strong><span>PDF · one page</span></span>
+								<svg class="icon"><use href="#i-arrow-right"/></svg>
+							</a>
+						</div>
+					</div>
+
+					<dl class="contact__meta">
+						<div><dt>Timezone</dt><dd>GMT+8 · PHT</dd></div>
+						<div><dt>Location</dt><dd>Leyte, Philippines</dd></div>
+						<div><dt>Core stack</dt><dd>Laravel · Vue · Flutter</dd></div>
+						<div><dt>Response time</dt><dd>&lt; 24 hours</dd></div>
+					</dl>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container footer__inner">
+			<p>&copy; <span id="year">2026</span> Nilo Besingga. All rights reserved.</p>
+			<div class="footer__links">
+				<a href="https://github.com/nilskie06" target="_blank" rel="noopener noreferrer">GitHub</a>
+				<a href="https://www.linkedin.com/in/nilo-besingga-b7346b196" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+				<a href="mailto:nbesingga@gmail.com">Email</a>
+			</div>
 		</div>
-	</div>
+	</footer>
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
+	<a href="#top" class="icon-btn to-top" aria-label="Back to top"><svg class="icon"><use href="#i-arrow-up"/></svg></a>
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
-	<!-- Tech FX -->
-	<script src="js/tech-fx.js"></script>
-
+	<script src="js/site.js"></script>
 </body>
 
 </html>
